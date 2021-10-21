@@ -24,7 +24,6 @@ public class CalculatorTest {
         System.out.println("I run after TEST");
     }
 
-
     @DataProvider(name = "sumTestDateProvider")
     public Object[][] sumTests() {
         return new Object[][] {
