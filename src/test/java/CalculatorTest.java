@@ -6,11 +6,11 @@ public class CalculatorTest {
 
     Calculator calculator;
 
-    @BeforeClass
-    public void initCalculator() {
-        System.out.println("I run before CLASS");
-        calculator = new Calculator();
-    }
+//    @BeforeClass
+//    public void initCalculator() {
+//        System.out.println("I run before CLASS");
+//        calculator = new Calculator();
+//    }
 
     @BeforeTest
     public void beforeTest() {
