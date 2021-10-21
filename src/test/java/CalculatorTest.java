@@ -24,14 +24,14 @@ public class CalculatorTest {
         System.out.println("I run after TEST");
     }
 
-    @DataProvider(name = "sumTestDateProvider")
-    public Object[][] sumTests() {
-        return new Object[][] {
-                {3, 5, 8},
-                {0, 5, 5},
-                {-1, 5, 4}
-        };
-    }
+//    @DataProvider(name = "sumTestDateProvider")
+//    public Object[][] sumTests() {
+//        return new Object[][] {
+//                {3, 5, 8},
+//                {0, 5, 5},
+//                {-1, 5, 4}
+//        };
+//    }
 
     @Test(dataProvider = "sumTestDateProvider")
     public void sumTestDateProvider(int firstNum, int secondNum, int expectedResult) {
