@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="CalculatorTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="CalculatorTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17+0"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/16.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/dimatkachenko/Desktop/QAHillelAutomation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/dimatkachenko/Desktop/hillel_automation_tests"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -13,7 +13,7 @@
     <property name="user.country" value="UA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/dimatkachenko/Desktop/QAHillelAutomation"/>
+    <property name="user.dir" value="/Users/dimatkachenko/Desktop/hillel_automation_tests"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="17+0"/>
     <property name="os.arch" value="aarch64"/>
@@ -61,7 +61,10 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="CalculatorTest" name="testSum" time="0.002"/>
+  <testcase classname="CalculatorTest" name="sumTestDateProvider" time="0.002"/>
+  <testcase classname="CalculatorTest" name="sumTestDateProvider" time="0"/>
+  <testcase classname="CalculatorTest" name="sumTestDateProvider" time="0"/>
+  <testcase classname="CalculatorTest" name="testSum" time="0"/>
   <testcase classname="CalculatorTest" name="testSum1" time="0"/>
   <testcase classname="CalculatorTest" name="testSum2" time="0"/>
 </testsuite>
