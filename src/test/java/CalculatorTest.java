@@ -8,7 +8,6 @@ public class CalculatorTest {
 
     Calculator calculator;
 
-
     @BeforeClass
     public void initCalculator() {
         System.out.println("I run before CLASS");
