@@ -21,7 +21,7 @@ public class StringReverseTest {
     @Test
     public void testStringReverse1() {
         stringReverse = new StringReverse();
-        String expectedResult = "dldroW olleH";
+        String expectedResult = "dlroW olleH";
         String actualResult = stringReverse.reversedString();
         Assert.assertEquals(actualResult, expectedResult,
                 "Not actual result, go refactor, dummy");
