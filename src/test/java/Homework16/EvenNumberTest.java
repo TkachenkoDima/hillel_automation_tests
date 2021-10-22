@@ -1,6 +1,5 @@
 package Homework16;
 
-import Homework16.EvenNumber;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
