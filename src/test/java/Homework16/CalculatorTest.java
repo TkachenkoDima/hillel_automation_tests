@@ -1,4 +1,6 @@
-import Lesson17.Calculator;
+package Homework16;
+
+import Homework16.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -70,5 +72,4 @@ public class CalculatorTest {
         Assert.assertEquals(actualResult, expectedResult,
                 "Actual result didn't match expected");
     }
-
 }
