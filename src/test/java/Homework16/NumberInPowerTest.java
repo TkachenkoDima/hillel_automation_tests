@@ -1,6 +1,5 @@
 package Homework16;
 
-import Homework16.NumberInPower;
 import org.testng.annotations.*;
 import org.testng.Assert;
 
