@@ -7,6 +7,11 @@ public class NumberInPowerTest {
 
     NumberInPower numberInPower;
 
+    @AfterTest
+    public void afterTestMessage() {
+        System.out.println("Number in power test passed");
+    }
+
     @Test
     public void testPowered () {
         numberInPower = new NumberInPower();

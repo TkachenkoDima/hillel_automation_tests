@@ -1,11 +1,17 @@
 package Homework16;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class StringReverseTest {
 
     StringReverse stringReverse;
+
+    @AfterTest
+    public void afterTestMessage() {
+        System.out.println("String reverse test passed");
+    }
 
     @Test
     public void testStringReverse() {
