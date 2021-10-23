@@ -2,11 +2,17 @@ package Homework16;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class StringReverseTest {
 
     StringReverse stringReverse;
+
+    @BeforeTest
+    public void beforeTest() {
+        stringReverse = new StringReverse();
+    }
 
     @AfterTest
     public void afterTestMessage() {
@@ -15,7 +21,6 @@ public class StringReverseTest {
 
     @Test
     public void testStringReverse() {
-        stringReverse = new StringReverse();
         String expectedResult = "Hello world";
         String actualResult = stringReverse.reversedString();
         Assert.assertNotEquals(actualResult, expectedResult,
@@ -26,7 +31,6 @@ public class StringReverseTest {
 
     @Test
     public void testStringReverse1() {
-        stringReverse = new StringReverse();
         String expectedResult = "dlroW olleH";
         String actualResult = stringReverse.reversedString();
         Assert.assertEquals(actualResult, expectedResult,

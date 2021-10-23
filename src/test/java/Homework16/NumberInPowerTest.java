@@ -7,6 +7,11 @@ public class NumberInPowerTest {
 
     NumberInPower numberInPower;
 
+    @BeforeTest
+    public void beforeTest() {
+        numberInPower = new NumberInPower();
+    }
+
     @AfterTest
     public void afterTestMessage() {
         System.out.println("Number in power test passed");
@@ -14,7 +19,6 @@ public class NumberInPowerTest {
 
     @Test
     public void testPowered () {
-        numberInPower = new NumberInPower();
         int expectedResult = 256;
         int actualResult = numberInPower.powered(4, 4);
 
@@ -24,7 +28,6 @@ public class NumberInPowerTest {
 
     @Test
     public void testPowered1 () {
-        numberInPower = new NumberInPower();
         int actualResult = numberInPower.powered(4, 4);
 
         Assert.assertEquals(actualResult, 256,
