@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Hillel Java Tests">
+
+    <test name="Classwork 16 tests">
+        <classes>
+            <class name="Classwork18.EvenNumberTest"/>
+            <class name="Classwork18.NumberInPowerTest"/>
+            <class name="Classwork18.StringReverseTest"/>
+        </classes>
+    </test>
+
+    <test name="Page title test">
+        <classes>
+            <class name="Homework17.PageTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
