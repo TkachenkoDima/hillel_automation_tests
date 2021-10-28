@@ -23,10 +23,10 @@ public class Guru99Test extends BaseTest {
         WebElement passwordField = driver.findElement(By.name("password"));
         passwordField.click();
         loginField.click();
-        WebElement blankUsername = driver.findElement(By.cssSelector("#message23"));
+        WebElement blankUsername = driver.findElement(By.id("message23"));
         Assert.assertTrue(blankUsername.isDisplayed(),
                 "Blank username message not displayed!");
-        WebElement blankPass = driver.findElement(By.cssSelector("#message18"));
+        WebElement blankPass = driver.findElement(By.id("message18"));
         blankPass.isDisplayed();
         Assert.assertTrue(blankPass.isDisplayed(),
                 "Blank pass message not displayed!");
@@ -38,7 +38,6 @@ public class Guru99Test extends BaseTest {
         WebElement loginButton = driver.findElement(By.name("btnLogin"));
         loginButton.click();
         Assert.assertEquals(driver.switchTo().alert().getText(), alertInvalidLoginPassText);
-        driver.switchTo().alert().accept();
     }
 
     @Test
@@ -51,7 +50,6 @@ public class Guru99Test extends BaseTest {
         WebElement loginButton = driver.findElement(By.name("btnLogin"));
         loginButton.click();
         Assert.assertEquals(driver.switchTo().alert().getText(), alertInvalidLoginPassText);
-        driver.switchTo().alert().accept();
     }
 
     @Test
