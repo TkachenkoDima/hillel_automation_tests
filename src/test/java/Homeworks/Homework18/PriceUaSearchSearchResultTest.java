@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 public class PriceUaSearchSearchResultTest extends BaseTest {
     private final String url = "https://price.ua/ua";
     private final String searchPhrase = "oculus";
+    private final String expectedElementTitle = "Oculus Quest 2 256 Gb";
 
     @Test
     public void PriceUaSearchTest () {
@@ -17,9 +18,10 @@ public class PriceUaSearchSearchResultTest extends BaseTest {
         searchField.sendKeys(searchPhrase);
         WebElement searchButton = driver.findElement(By.cssSelector("#search-block-submit"));
         searchButton.click();
-        WebElement myVR = driver.findElement(By.cssSelector("#title-link-4612798"));
-        Assert.assertTrue(myVR.isDisplayed(),
+        WebElement foundElementTitle = driver.findElement(By.cssSelector("a[title^='Oculus Quest 2 256 Gb'"));
+        Assert.assertTrue(foundElementTitle.isDisplayed(),
                 "Search product not displayed!");
-        System.out.println(myVR.getAccessibleName() + " is displayed.");
+        Assert.assertEquals(foundElementTitle.getAccessibleName(), expectedElementTitle,
+                "Search product not as expected");
     }
 }
