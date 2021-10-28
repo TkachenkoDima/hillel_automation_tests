@@ -1,39 +1,394 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="6" total="26" passed="13" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-23T14:35:50 EEST" name="Command line suite" finished-at="2021-10-23T14:35:50 EEST" duration-ms="18">
+  <suite started-at="2021-10-28T22:06:40 EEST" name="Command line suite" finished-at="2021-10-28T22:07:01 EEST" duration-ms="20878">
     <groups>
     </groups>
-    <test started-at="2021-10-23T14:35:50 EEST" name="Command line test" finished-at="2021-10-23T14:35:50 EEST" duration-ms="18">
-      <class name="Homework16.NumberInPowerTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Homework16.NumberInPowerTest@52bf72b5]" started-at="2021-10-23T14:35:50 EEST" name="beforeTest" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+    <test started-at="2021-10-28T22:06:40 EEST" name="Command line test" finished-at="2021-10-28T22:07:01 EEST" duration-ms="20878">
+      <class name="Classwork18.StringReverseTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Classwork18.StringReverseTest@1fa121e2]" started-at="2021-10-28T22:06:43 EEST" name="beforeTest" finished-at="2021-10-28T22:06:43 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="testPowered()[pri:0, instance:Homework16.NumberInPowerTest@52bf72b5]" started-at="2021-10-23T14:35:50 EEST" name="testPowered" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        <test-method signature="testStringReverse()[pri:0, instance:Classwork18.StringReverseTest@1fa121e2]" started-at="2021-10-28T22:07:01 EEST" name="testStringReverse" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPowered -->
-        <test-method signature="testPowered1()[pri:0, instance:Homework16.NumberInPowerTest@52bf72b5]" started-at="2021-10-23T14:35:50 EEST" name="testPowered1" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- testStringReverse -->
+        <test-method signature="testStringReverse1()[pri:0, instance:Classwork18.StringReverseTest@1fa121e2]" started-at="2021-10-28T22:07:01 EEST" name="testStringReverse1" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPowered1 -->
-        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Homework16.NumberInPowerTest@52bf72b5]" started-at="2021-10-23T14:35:50 EEST" name="afterTestMessage" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- testStringReverse1 -->
+        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Classwork18.StringReverseTest@1fa121e2]" started-at="2021-10-28T22:07:01 EEST" name="afterTestMessage" finished-at="2021-10-28T22:07:01 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMessage -->
-      </class> <!-- Homework16.NumberInPowerTest -->
-      <class name="Homework16.CalculatorTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="beforeTest" finished-at="2021-10-23T14:35:50 EEST" duration-ms="3" status="PASS">
+      </class> <!-- Classwork18.StringReverseTest -->
+      <class name="Homeworks.Homework17.PageTest">
+        <test-method signature="LMSPageTest()[pri:0, instance:Homeworks.Homework17.PageTest@662ac478]" started-at="2021-10-28T22:06:55 EEST" name="LMSPageTest" finished-at="2021-10-28T22:06:55 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework17.PageTest.correctPageTitle(PageTest.java:26)
+at Homeworks.Homework17.PageTest.LMSPageTest(PageTest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LMSPageTest -->
+      </class> <!-- Homeworks.Homework17.PageTest -->
+      <class name="Homeworks.Homework18.Guru99Test">
+        <test-method signature="blankFieldsMessages()[pri:0, instance:Homeworks.Homework18.Guru99Test@229f66ed]" started-at="2021-10-28T22:06:55 EEST" name="blankFieldsMessages" finished-at="2021-10-28T22:06:55 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework18.Guru99Test.blankFieldsMessages(Guru99Test.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankFieldsMessages -->
+        <test-method signature="loginWithExtraSpaces()[pri:0, instance:Homeworks.Homework18.Guru99Test@229f66ed]" started-at="2021-10-28T22:06:55 EEST" name="loginWithExtraSpaces" finished-at="2021-10-28T22:06:55 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework18.Guru99Test.loginWithExtraSpaces(Guru99Test.java:59)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithExtraSpaces -->
+        <test-method signature="loginWithEmptyFields()[pri:0, instance:Homeworks.Homework18.Guru99Test@229f66ed]" started-at="2021-10-28T22:06:55 EEST" name="loginWithEmptyFields" finished-at="2021-10-28T22:06:55 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework18.Guru99Test.loginWithEmptyFields(Guru99Test.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithEmptyFields -->
+        <test-method signature="loginWithInvalidUsername()[pri:0, instance:Homeworks.Homework18.Guru99Test@229f66ed]" started-at="2021-10-28T22:06:55 EEST" name="loginWithInvalidUsername" finished-at="2021-10-28T22:06:55 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework18.Guru99Test.loginWithInvalidUsername(Guru99Test.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidUsername -->
+      </class> <!-- Homeworks.Homework18.Guru99Test -->
+      <class name="Classwork18.EvenNumberTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Classwork18.EvenNumberTest@179ece50]" started-at="2021-10-28T22:06:42 EEST" name="beforeTest" finished-at="2021-10-28T22:06:42 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="initCalculator()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="initCalculator" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        <test-method signature="evenNumberTestAssertFalse()[pri:0, instance:Classwork18.EvenNumberTest@179ece50]" started-at="2021-10-28T22:07:01 EEST" name="evenNumberTestAssertFalse" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- evenNumberTestAssertFalse -->
+        <test-method signature="evenNumberTestAssertTrue()[pri:0, instance:Classwork18.EvenNumberTest@179ece50]" started-at="2021-10-28T22:07:01 EEST" name="evenNumberTestAssertTrue" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- evenNumberTestAssertTrue -->
+        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Classwork18.EvenNumberTest@179ece50]" started-at="2021-10-28T22:07:01 EEST" name="afterTestMessage" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMessage -->
+      </class> <!-- Classwork18.EvenNumberTest -->
+      <class name="Classwork18.NumberInPowerTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Classwork18.NumberInPowerTest@3b0090a4]" started-at="2021-10-28T22:06:42 EEST" name="beforeTest" finished-at="2021-10-28T22:06:42 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="testPowered1()[pri:0, instance:Classwork18.NumberInPowerTest@3b0090a4]" started-at="2021-10-28T22:07:01 EEST" name="testPowered1" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPowered1 -->
+        <test-method signature="testPowered()[pri:0, instance:Classwork18.NumberInPowerTest@3b0090a4]" started-at="2021-10-28T22:07:01 EEST" name="testPowered" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPowered -->
+        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Classwork18.NumberInPowerTest@3b0090a4]" started-at="2021-10-28T22:07:01 EEST" name="afterTestMessage" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMessage -->
+      </class> <!-- Classwork18.NumberInPowerTest -->
+      <class name="Homeworks.Homework18.SauceDemoTest">
+        <test-method signature="SauceDemoPageTest()[pri:0, instance:Homeworks.Homework18.SauceDemoTest@31190526]" started-at="2021-10-28T22:06:55 EEST" name="SauceDemoPageTest" finished-at="2021-10-28T22:06:55 EEST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at Homeworks.Homework18.SauceDemoTest.SauceDemoPageTest(SauceDemoTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SauceDemoPageTest -->
+      </class> <!-- Homeworks.Homework18.SauceDemoTest -->
+      <class name="Classwork18.CalculatorTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:06:42 EEST" name="beforeTest" finished-at="2021-10-28T22:06:42 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="initCalculator()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="initCalculator" finished-at="2021-10-28T22:07:01 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initCalculator -->
-        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-23T14:35:50 EEST" duration-ms="1" status="PASS">
+        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,40 +409,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sumTestDateProvider -->
-        <test-method signature="testSum2()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="testSum2" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSum2 -->
-        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[-1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sumTestDateProvider -->
-        <test-method signature="testSum1()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="testSum1" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSum1 -->
-        <test-method signature="testSum()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="testSum" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSum -->
-        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,47 +430,152 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sumTestDateProvider -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Homework16.CalculatorTest@dd8ba08]" started-at="2021-10-23T14:35:50 EEST" name="afterTest" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        <test-method signature="testSum1()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="testSum1" finished-at="2021-10-28T22:07:01 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSum1 -->
+        <test-method signature="sumTestDateProvider(int,int,int)[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="sumTestDateProvider" data-provider="sumTestDateProvider" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sumTestDateProvider -->
+        <test-method signature="testSum()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="testSum" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSum -->
+        <test-method signature="testSum2()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="testSum2" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSum2 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Classwork18.CalculatorTest@3cd3e762]" started-at="2021-10-28T22:07:01 EEST" name="afterTest" finished-at="2021-10-28T22:07:01 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- Homework16.CalculatorTest -->
-      <class name="Homework16.StringReverseTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Homework16.StringReverseTest@245b4bdc]" started-at="2021-10-23T14:35:50 EEST" name="beforeTest" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+      </class> <!-- Classwork18.CalculatorTest -->
+      <class name="Homeworks.Homework18.PriceUaSearchSearchResultTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Homeworks.Homework18.PriceUaSearchSearchResultTest@10683d9d]" started-at="2021-10-28T22:06:40 EEST" name="setUp" finished-at="2021-10-28T22:06:42 EEST" duration-ms="1696" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="testStringReverse1()[pri:0, instance:Homework16.StringReverseTest@245b4bdc]" started-at="2021-10-23T14:35:50 EEST" name="testStringReverse1" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="PriceUaSearchTest()[pri:0, instance:Homeworks.Homework18.PriceUaSearchSearchResultTest@10683d9d]" started-at="2021-10-28T22:06:43 EEST" name="PriceUaSearchTest" finished-at="2021-10-28T22:06:55 EEST" duration-ms="12436" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#title-link-4612798"}
+  (Session info: chrome=95.0.4638.54)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MacBook-Pro-Dima.local', ip: 'fe80:0:0:0:88b:bf65:432e:8546%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.0.1', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75e63299940f64e2c78cc0bc69835e3d, findElement {using=css selector, value=#title-link-4612798}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: /var/folders/h2/0bb8hj3n02l...}, goog:chromeOptions: {debuggerAddress: localhost:64336}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64336/devtoo..., se:cdpVersion: 95.0.4638.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 75e63299940f64e2c78cc0bc69835e3d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#title-link-4612798"}
+  (Session info: chrome=95.0.4638.54)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MacBook-Pro-Dima.local', ip: 'fe80:0:0:0:88b:bf65:432e:8546%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.0.1', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75e63299940f64e2c78cc0bc69835e3d, findElement {using=css selector, value=#title-link-4612798}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: /var/folders/h2/0bb8hj3n02l...}, goog:chromeOptions: {debuggerAddress: localhost:64336}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64336/devtoo..., se:cdpVersion: 95.0.4638.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 75e63299940f64e2c78cc0bc69835e3d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at Homeworks.Homework18.PriceUaSearchSearchResultTest.PriceUaSearchTest(PriceUaSearchSearchResultTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStringReverse1 -->
-        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Homework16.StringReverseTest@245b4bdc]" started-at="2021-10-23T14:35:50 EEST" name="afterTestMessage" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- PriceUaSearchTest -->
+        <test-method is-config="true" signature="killDriver()[pri:0, instance:Homeworks.Homework18.PriceUaSearchSearchResultTest@10683d9d]" started-at="2021-10-28T22:07:01 EEST" name="killDriver" finished-at="2021-10-28T22:07:01 EEST" duration-ms="98" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTestMessage -->
-        <test-method signature="testStringReverse()[pri:0, instance:Homework16.StringReverseTest@245b4bdc]" started-at="2021-10-23T14:35:50 EEST" name="testStringReverse" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- killDriver -->
+      </class> <!-- Homeworks.Homework18.PriceUaSearchSearchResultTest -->
+      <class name="Classwork18.UIDemoTests.SeleniumDevTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Classwork18.UIDemoTests.SeleniumDevTest@9d5509a]" started-at="2021-10-28T22:06:42 EEST" name="setUp" finished-at="2021-10-28T22:06:43 EEST" duration-ms="1049" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStringReverse -->
-      </class> <!-- Homework16.StringReverseTest -->
-      <class name="Homework16.EvenNumberTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Homework16.EvenNumberTest@1aa7ecca]" started-at="2021-10-23T14:35:50 EEST" name="beforeTest" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="driverActionsTest()[pri:0, instance:Classwork18.UIDemoTests.SeleniumDevTest@9d5509a]" started-at="2021-10-28T22:06:55 EEST" name="driverActionsTest" finished-at="2021-10-28T22:07:01 EEST" duration-ms="5450" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="evenNumberTestAssertFalse()[pri:0, instance:Homework16.EvenNumberTest@1aa7ecca]" started-at="2021-10-23T14:35:50 EEST" name="evenNumberTestAssertFalse" finished-at="2021-10-23T14:35:50 EEST" duration-ms="1" status="PASS">
+        </test-method> <!-- driverActionsTest -->
+        <test-method is-config="true" signature="killDriver()[pri:0, instance:Classwork18.UIDemoTests.SeleniumDevTest@9d5509a]" started-at="2021-10-28T22:07:01 EEST" name="killDriver" finished-at="2021-10-28T22:07:01 EEST" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- evenNumberTestAssertFalse -->
-        <test-method signature="evenNumberTestAssertTrue()[pri:0, instance:Homework16.EvenNumberTest@1aa7ecca]" started-at="2021-10-23T14:35:50 EEST" name="evenNumberTestAssertTrue" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evenNumberTestAssertTrue -->
-        <test-method is-config="true" signature="afterTestMessage()[pri:0, instance:Homework16.EvenNumberTest@1aa7ecca]" started-at="2021-10-23T14:35:50 EEST" name="afterTestMessage" finished-at="2021-10-23T14:35:50 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestMessage -->
-      </class> <!-- Homework16.EvenNumberTest -->
+        </test-method> <!-- killDriver -->
+      </class> <!-- Classwork18.UIDemoTests.SeleniumDevTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

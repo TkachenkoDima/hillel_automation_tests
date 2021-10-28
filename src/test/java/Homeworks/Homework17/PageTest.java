@@ -1,10 +1,12 @@
-package Homework17;
+package Homeworks.Homework17;
 
+import Homeworks.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import java.util.concurrent.TimeUnit;
+
+import java.time.Duration;
 
 public class PageTest extends BaseTest {
     private final String lmsURL = "https://lms.ithillel.ua/";
@@ -50,10 +52,11 @@ public class PageTest extends BaseTest {
 
     private void login () {
         driver.get(lmsURL);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.xpath("//input[@type='email']")).sendKeys("demitry.tkachenko@gmail.com");
         driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Qweasd12");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.name(""));
         Assert.assertEquals(driver.getTitle(), lmsTitle,
                 "Not expected page title after login");
     }

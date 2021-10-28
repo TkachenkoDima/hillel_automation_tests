@@ -10,11 +10,11 @@
         </classes>
     </test>
 
-    <test name="Page title test">
+    <test name="Homework 18 tests">
         <classes>
-            <class name="Homework17.PageTest">
-
-            </class>
+            <class name="Homeworks.Homework18.SauceDemoTest"/>
+            <class name="Homeworks.Homework18.PriceUaSearchSearchResultTest"/>
+            <class name="Homeworks.Homework18.Guru99Test"/>
         </classes>
     </test>
 </suite>
