@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
-              <span class="suite-name border-passed">Command line suite</span>
+              <span class="suite-name border-failed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,51 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,   12 passed</span>
+                    <span class="method-stats">20 methods, 7 failed,   13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Command_line_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework17.PageTest" class="method navigator-link" hash-for-method="LMSPageTest">LMSPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.PriceUaSearchSearchResultTest" class="method navigator-link" hash-for-method="PriceUaSearchTest">PriceUaSearchTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.SauceDemoTest" class="method navigator-link" hash-for-method="SauceDemoPageTest">SauceDemoPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.Guru99Test" class="method navigator-link" hash-for-method="blankFieldsMessages">blankFieldsMessages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.Guru99Test" class="method navigator-link" hash-for-method="loginWithEmptyFields">loginWithEmptyFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.Guru99Test" class="method navigator-link" hash-for-method="loginWithExtraSpaces">loginWithExtraSpaces</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Homeworks.Homework18.Guru99Test" class="method navigator-link" hash-for-method="loginWithInvalidUsername">loginWithInvalidUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Command_line_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,62 +148,67 @@
                     <div class="method-list-content passed suite-Command_line_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.EvenNumberTest" class="method navigator-link" hash-for-method="evenNumberTestAssertFalse">evenNumberTestAssertFalse</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.UIDemoTests.SeleniumDevTest" class="method navigator-link" hash-for-method="driverActionsTest">driverActionsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.EvenNumberTest" class="method navigator-link" hash-for-method="evenNumberTestAssertTrue">evenNumberTestAssertTrue</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.EvenNumberTest" class="method navigator-link" hash-for-method="evenNumberTestAssertFalse">evenNumberTestAssertFalse</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(-1, 5, 4)">sumTestDateProvider(-1, 5, 4)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.EvenNumberTest" class="method navigator-link" hash-for-method="evenNumberTestAssertTrue">evenNumberTestAssertTrue</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(3, 5, 8)">sumTestDateProvider(3, 5, 8)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(0, 5, 5)">sumTestDateProvider(0, 5, 5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(0, 5, 5)">sumTestDateProvider(0, 5, 5)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(-1, 5, 4)">sumTestDateProvider(-1, 5, 4)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.NumberInPowerTest" class="method navigator-link" hash-for-method="testPowered">testPowered</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="sumTestDateProvider(3, 5, 8)">sumTestDateProvider(3, 5, 8)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.NumberInPowerTest" class="method navigator-link" hash-for-method="testPowered1">testPowered1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.NumberInPowerTest" class="method navigator-link" hash-for-method="testPowered">testPowered</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.StringReverseTest" class="method navigator-link" hash-for-method="testStringReverse">testStringReverse</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.NumberInPowerTest" class="method navigator-link" hash-for-method="testPowered1">testPowered1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.StringReverseTest" class="method navigator-link" hash-for-method="testStringReverse1">testStringReverse1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.StringReverseTest" class="method navigator-link" hash-for-method="testStringReverse">testStringReverse</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="testSum">testSum</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.StringReverseTest" class="method navigator-link" hash-for-method="testStringReverse1">testStringReverse1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="testSum1">testSum1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="testSum">testSum</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="Homework16.CalculatorTest" class="method navigator-link" hash-for-method="testSum2">testSum2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="testSum1">testSum1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="Classwork18.CalculatorTest" class="method navigator-link" hash-for-method="testSum2">testSum2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
@@ -174,54 +223,146 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-passed">
+          <div class="suite-Command_line_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Homework16.NumberInPowerTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">Homeworks.Homework18.SauceDemoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPowered">
-                  </a> <!-- testPowered -->
-                  <span class="method-name">testPowered</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testPowered1">
-                  </a> <!-- testPowered1 -->
-                  <span class="method-name">testPowered1</span>
+                  <a name="SauceDemoPageTest">
+                  </a> <!-- SauceDemoPageTest -->
+                  <span class="method-name">SauceDemoPageTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework18.SauceDemoTest.SauceDemoPageTest(SauceDemoTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-          <div class="suite-Command_line_suite-class-passed">
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Homework16.StringReverseTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">Homeworks.Homework18.Guru99Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testStringReverse">
-                  </a> <!-- testStringReverse -->
-                  <span class="method-name">testStringReverse</span>
+                  <a name="blankFieldsMessages">
+                  </a> <!-- blankFieldsMessages -->
+                  <span class="method-name">blankFieldsMessages</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework18.Guru99Test.blankFieldsMessages(Guru99Test.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testStringReverse1">
-                  </a> <!-- testStringReverse1 -->
-                  <span class="method-name">testStringReverse1</span>
+                  <a name="loginWithEmptyFields">
+                  </a> <!-- loginWithEmptyFields -->
+                  <span class="method-name">loginWithEmptyFields</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework18.Guru99Test.loginWithEmptyFields(Guru99Test.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithExtraSpaces">
+                  </a> <!-- loginWithExtraSpaces -->
+                  <span class="method-name">loginWithExtraSpaces</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework18.Guru99Test.loginWithExtraSpaces(Guru99Test.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidUsername">
+                  </a> <!-- loginWithInvalidUsername -->
+                  <span class="method-name">loginWithInvalidUsername</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework18.Guru99Test.loginWithInvalidUsername(Guru99Test.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Homeworks.Homework18.PriceUaSearchSearchResultTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PriceUaSearchTest">
+                  </a> <!-- PriceUaSearchTest -->
+                  <span class="method-name">PriceUaSearchTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#title-link-4612798&quot;}
+  (Session info: chrome=95.0.4638.54)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;MacBook-Pro-Dima.local&apos;, ip: &apos;fe80:0:0:0:88b:bf65:432e:8546%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.0.1&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75e63299940f64e2c78cc0bc69835e3d, findElement {using=css selector, value=#title-link-4612798}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: /var/folders/h2/0bb8hj3n02l...}, goog:chromeOptions: {debuggerAddress: localhost:64336}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64336/devtoo..., se:cdpVersion: 95.0.4638.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 75e63299940f64e2c78cc0bc69835e3d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at Homeworks.Homework18.PriceUaSearchSearchResultTest.PriceUaSearchTest(PriceUaSearchSearchResultTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 42 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Homeworks.Homework17.PageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LMSPageTest">
+                  </a> <!-- LMSPageTest -->
+                  <span class="method-name">LMSPageTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at Homeworks.Homework17.PageTest.correctPageTitle(PageTest.java:26)
+	at Homeworks.Homework17.PageTest.LMSPageTest(PageTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Homework16.EvenNumberTest</span>
+              <span class="class-name">Classwork18.EvenNumberTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -243,9 +384,39 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Homework16.CalculatorTest</span>
+              <span class="class-name">Classwork18.StringReverseTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStringReverse">
+                  </a> <!-- testStringReverse -->
+                  <span class="method-name">testStringReverse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStringReverse1">
+                  </a> <!-- testStringReverse1 -->
+                  <span class="method-name">testStringReverse1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Classwork18.CalculatorTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="sumTestDateProvider(0, 5, 5)">
+                  </a> <!-- sumTestDateProvider(0, 5, 5) -->
+                  <span class="method-name">sumTestDateProvider</span>
+                  <span class="parameters">(0, 5, 5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="sumTestDateProvider(-1, 5, 4)">
@@ -260,14 +431,6 @@
                   </a> <!-- sumTestDateProvider(3, 5, 8) -->
                   <span class="method-name">sumTestDateProvider</span>
                   <span class="parameters">(3, 5, 8)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sumTestDateProvider(0, 5, 5)">
-                  </a> <!-- sumTestDateProvider(0, 5, 5) -->
-                  <span class="method-name">sumTestDateProvider</span>
-                  <span class="parameters">(0, 5, 5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -293,6 +456,43 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Classwork18.NumberInPowerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPowered">
+                  </a> <!-- testPowered -->
+                  <span class="method-name">testPowered</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPowered1">
+                  </a> <!-- testPowered1 -->
+                  <span class="method-name">testPowered1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Classwork18.UIDemoTests.SeleniumDevTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="driverActionsTest">
+                  </a> <!-- driverActionsTest -->
+                  <span class="method-name">driverActionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
         </div> <!-- panel Command_line_suite -->
         <div panel-name="test-xml-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -304,10 +504,16 @@
 &lt;suite name=&quot;Command line suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Command line test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Homework16.EvenNumberTest&quot;/&gt;
-      &lt;class name=&quot;Homework16.NumberInPowerTest&quot;/&gt;
-      &lt;class name=&quot;Homework16.CalculatorTest&quot;/&gt;
-      &lt;class name=&quot;Homework16.StringReverseTest&quot;/&gt;
+      &lt;class name=&quot;Homeworks.Homework18.PriceUaSearchSearchResultTest&quot;/&gt;
+      &lt;class name=&quot;Homeworks.Homework18.Guru99Test&quot;/&gt;
+      &lt;class name=&quot;Homeworks.Homework18.SauceDemoTest&quot;/&gt;
+      &lt;class name=&quot;Homeworks.Homework17.PageTest&quot;/&gt;
+      &lt;class name=&quot;Homeworks.BaseTest&quot;/&gt;
+      &lt;class name=&quot;Classwork18.UIDemoTests.SeleniumDevTest&quot;/&gt;
+      &lt;class name=&quot;Classwork18.EvenNumberTest&quot;/&gt;
+      &lt;class name=&quot;Classwork18.NumberInPowerTest&quot;/&gt;
+      &lt;class name=&quot;Classwork18.CalculatorTest&quot;/&gt;
+      &lt;class name=&quot;Classwork18.StringReverseTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
@@ -321,7 +527,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (4 classes)</span>
+                <span class="test-name">Command line test (10 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -347,60 +553,92 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'evenNumberTestAssertFalse')
-data.setCell(0, 2, 'Homework16.EvenNumberTest')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'PriceUaSearchTest')
+data.setCell(0, 2, 'Homeworks.Homework18.PriceUaSearchSearchResultTest')
+data.setCell(0, 3, 12436);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sumTestDateProvider')
-data.setCell(1, 2, 'Homework16.CalculatorTest')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'driverActionsTest')
+data.setCell(1, 2, 'Classwork18.UIDemoTests.SeleniumDevTest')
+data.setCell(1, 3, 5450);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testStringReverse1')
-data.setCell(2, 2, 'Homework16.StringReverseTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'testSum1')
+data.setCell(2, 2, 'Classwork18.CalculatorTest')
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testPowered1')
-data.setCell(3, 2, 'Homework16.NumberInPowerTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'SauceDemoPageTest')
+data.setCell(3, 2, 'Homeworks.Homework18.SauceDemoTest')
+data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testPowered')
-data.setCell(4, 2, 'Homework16.NumberInPowerTest')
+data.setCell(4, 1, 'testPowered1')
+data.setCell(4, 2, 'Classwork18.NumberInPowerTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'evenNumberTestAssertTrue')
-data.setCell(5, 2, 'Homework16.EvenNumberTest')
+data.setCell(5, 1, 'testPowered')
+data.setCell(5, 2, 'Classwork18.NumberInPowerTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testSum2')
-data.setCell(6, 2, 'Homework16.CalculatorTest')
+data.setCell(6, 1, 'sumTestDateProvider')
+data.setCell(6, 2, 'Classwork18.CalculatorTest')
 data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'sumTestDateProvider')
-data.setCell(7, 2, 'Homework16.CalculatorTest')
+data.setCell(7, 1, 'testStringReverse')
+data.setCell(7, 2, 'Classwork18.StringReverseTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testSum1')
-data.setCell(8, 2, 'Homework16.CalculatorTest')
+data.setCell(8, 1, 'sumTestDateProvider')
+data.setCell(8, 2, 'Classwork18.CalculatorTest')
 data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testSum')
-data.setCell(9, 2, 'Homework16.CalculatorTest')
+data.setCell(9, 2, 'Classwork18.CalculatorTest')
 data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'sumTestDateProvider')
-data.setCell(10, 2, 'Homework16.CalculatorTest')
+data.setCell(10, 1, 'testSum2')
+data.setCell(10, 2, 'Classwork18.CalculatorTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testStringReverse')
-data.setCell(11, 2, 'Homework16.StringReverseTest')
+data.setCell(11, 1, 'evenNumberTestAssertTrue')
+data.setCell(11, 2, 'Classwork18.EvenNumberTest')
 data.setCell(11, 3, 0);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'sumTestDateProvider')
+data.setCell(12, 2, 'Classwork18.CalculatorTest')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testStringReverse1')
+data.setCell(13, 2, 'Classwork18.StringReverseTest')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'evenNumberTestAssertFalse')
+data.setCell(14, 2, 'Classwork18.EvenNumberTest')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'LMSPageTest')
+data.setCell(15, 2, 'Homeworks.Homework17.PageTest')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'blankFieldsMessages')
+data.setCell(16, 2, 'Homeworks.Homework18.Guru99Test')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'loginWithEmptyFields')
+data.setCell(17, 2, 'Homeworks.Homework18.Guru99Test')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'loginWithInvalidUsername')
+data.setCell(18, 2, 'Homeworks.Homework18.Guru99Test')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'loginWithExtraSpaces')
+data.setCell(19, 2, 'Homeworks.Homework18.Guru99Test')
+data.setCell(19, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -415,9 +653,36 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Homeworks.Homework18.SauceDemoTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">killDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Homeworks.Homework18.Guru99Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">killDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Homeworks.Homework17.PageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">killDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Command_line_suite" class="panel">
@@ -426,121 +691,228 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.CalculatorTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Homeworks.Homework18.PriceUaSearchSearchResultTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.EvenNumberTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Classwork18.CalculatorTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-start">1697 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.StringReverseTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Classwork18.EvenNumberTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-start">1697 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.NumberInPowerTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Classwork18.NumberInPowerTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-start">1697 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.EvenNumberTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Classwork18.UIDemoTests.SeleniumDevTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1698 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.StringReverseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">2747 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Homeworks.Homework18.PriceUaSearchSearchResultTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">PriceUaSearchTest</span>
+                <span class="method-start">2760 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Homeworks.Homework18.Guru99Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">blankFieldsMessages</span>
+                <span class="method-start">15209 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginWithExtraSpaces</span>
+                <span class="method-start">15210 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginWithEmptyFields</span>
+                <span class="method-start">15210 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Homeworks.Homework18.SauceDemoTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SauceDemoPageTest</span>
+                <span class="method-start">15211 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Homeworks.Homework18.Guru99Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginWithInvalidUsername</span>
+                <span class="method-start">15211 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Homeworks.Homework17.PageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LMSPageTest</span>
+                <span class="method-start">15212 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.UIDemoTests.SeleniumDevTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">driverActionsTest</span>
+                <span class="method-start">15213 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.EvenNumberTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">evenNumberTestAssertFalse</span>
-                <span class="method-start">11 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">evenNumberTestAssertTrue</span>
-                <span class="method-start">12 ms</span>
+                <span class="method-start">20663 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.NumberInPowerTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testPowered</span>
-                <span class="method-start">13 ms</span>
-              </div> <!-- test-method -->
+              <div class="chronological-class-name">Classwork18.NumberInPowerTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testPowered1</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-start">20664 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.CalculatorTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Classwork18.EvenNumberTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">evenNumberTestAssertTrue</span>
+                <span class="method-start">20664 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.NumberInPowerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPowered</span>
+                <span class="method-start">20664 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.CalculatorTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initCalculator</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-start">20664 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">sumTestDateProvider(3, 5, 8)</span>
-                <span class="method-start">15 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testSum2</span>
-                <span class="method-start">16 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">sumTestDateProvider(-1, 5, 4)</span>
-                <span class="method-start">16 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testSum1</span>
-                <span class="method-start">16 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testSum</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">20667 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sumTestDateProvider(0, 5, 5)</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">20668 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.StringReverseTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testStringReverse1</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-name">testSum1</span>
+                <span class="method-start">20668 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">sumTestDateProvider(-1, 5, 4)</span>
+                <span class="method-start">20668 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSum</span>
+                <span class="method-start">20668 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.EvenNumberTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Homeworks.Homework18.PriceUaSearchSearchResultTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
-                <span class="method-name">afterTestMessage</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-name">killDriver</span>
+                <span class="method-start">20669 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.NumberInPowerTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTestMessage</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Homework16.StringReverseTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTestMessage</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="chronological-class-name">Classwork18.StringReverseTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testStringReverse</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">20669 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.CalculatorTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSum2</span>
+                <span class="method-start">20669 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.StringReverseTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testStringReverse1</span>
+                <span class="method-start">20669 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.EvenNumberTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTestMessage</span>
+                <span class="method-start">20767 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.NumberInPowerTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTestMessage</span>
+                <span class="method-start">20767 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.UIDemoTests.SeleniumDevTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">killDriver</span>
+                <span class="method-start">20767 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.CalculatorTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">20767 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Classwork18.StringReverseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTestMessage</span>
+                <span class="method-start">20876 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
