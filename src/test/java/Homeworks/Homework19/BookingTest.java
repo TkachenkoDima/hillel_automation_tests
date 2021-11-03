@@ -21,8 +21,10 @@ public class BookingTest extends BaseTest {
     private final String nextMonthIcon = ".bui-calendar__control--next";
 
     private final String destinationField = "input[placeholder]";
-    private final String checkInDateField = "div[data-placeholder='Check-in date']";
-    private final String checkOutDateField = "div[data-mode='checkout'";
+    private final String checkInDateField = "div[data-placeholder='Check-in Date']";
+    private final String checkOutDateField = "div[data-placeholder='Check-out Date'";
+
+    private final String reviewScore = "__bui-50";
 
     private final String url = "https://www.booking.com";
     private final String destination = "London";
@@ -36,32 +38,25 @@ public class BookingTest extends BaseTest {
     private final String departureWeekday = "Friday";
 
     @Test
-    public void BookingTest() {
+    public void BookingPageTest() {
         driver.get(url);
         driver.findElement(By.xpath(languageIcon)).click();
         driver.findElement(By.cssSelector(englishLanguageIcon)).click();
         driver.findElement(By.cssSelector(searchDestinationButton)).sendKeys(destination + Keys.ENTER);
-
         selectArrivalDate();
-
         driver.findElement(By.cssSelector(checkOutButton)).click();
-
         selectDepartureDate();
-
         driver.findElement(By.cssSelector(searchButton)).click();
-
-
         Assert.assertEquals(driver.findElement(By.cssSelector(destinationField)).getAccessibleName(), destination,
                 "Destination is not as expected");
-        Assert.assertEquals(driver.findElement(By.cssSelector(checkInDateField)),
-                arrivalWeekday + ", " + arrivalMonth + " " + arrivalDate + ", " + arrivalYear);
+        Assert.assertEquals(driver.findElement(By.cssSelector(checkInDateField)).getText(),
+                arrivalWeekday + ", " + arrivalMonth + " " + arrivalDate + ", " + arrivalYear,
+                "Check in date is not as expected");
         Assert.assertEquals(driver.findElement(By.cssSelector(checkOutDateField)).getText(),
-                (departureWeekday + ", " + departureMonth + " " + departureDate + ", " + departureYear));
+                departureWeekday + ", " + departureMonth + " " + departureDate + ", " + departureYear,
+                "Check out date is not as expected");
 
-
-//        Assert.assertEquals(driver.findElement(By.cssSelector(checkOutDateField)).getText(),
-//                departureWeekday + ", " + departureMonth + " " + departureDate + ", " + departureYear,
-//                "Departure date is not as expected");
+        driver.findElement(By.id(reviewScore)).click();
     }
 
     public void selectArrivalDate() {
