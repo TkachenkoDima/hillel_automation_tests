@@ -58,8 +58,11 @@ public class BookingTest extends BaseTest {
 
         driver.findElement(By.cssSelector(reviewScore)).click();
 
-        List<WebElement> score = driver.findElements(By.cssSelector("div[class^='hotellist_wrap']"));
-//        div[aria-label]
+        List<WebElement> score = driver.findElements(By.cssSelector("div[aria-label^='Scored']"));
+        for (WebElement superbScore : score) {
+            Assert.assertEquals(superbScore.getText(),
+                    "9");
+        }
 
         System.out.println("kek");
     }
