@@ -17,4 +17,11 @@
             <class name="Homeworks.Homework18.Guru99Test"/>
         </classes>
     </test>
+
+    <test name="Homework 19 tests">
+        <classes>
+            <class name="Homeworks.Homework19.BookingTest">
+            </class>
+        </classes>
+    </test>
 </suite>
