@@ -25,7 +25,7 @@ public class BookingTest extends BaseTest {
 
     private final String url = "https://www.booking.com";
     private final String destination = "London";
-    private final String arrivalYear = "2021";
+    private final String year = "2021";
     private final String arrivalMonth = "December";
     private final String arrivalDate = "15";
     private final String arrivalWeekday = "Wednesday";
@@ -41,15 +41,15 @@ public class BookingTest extends BaseTest {
         clickEnglishLanguageIcon();
         inputDestination();
         clickDatesSelection();
-        selectArrivalDate();
-        selectDepartureDate();
+        selectDate(arrivalMonth, arrivalDate);
+        selectDate(departureMonth, departureDate);
         clickSearch();
         clickSuperbScoreCheckBox();
 
         Assert.assertEquals(driver.findElement(By.cssSelector(destinationField)).getAccessibleName(), destination,
                 "Destination is not as expected");
         Assert.assertEquals(driver.findElement(By.cssSelector(checkInDateField)).getText(),
-                arrivalWeekday + ", " + arrivalMonth + " " + arrivalDate + ", " + arrivalYear,
+                arrivalWeekday + ", " + arrivalMonth + " " + arrivalDate + ", " + year,
                 "Check in date is not as expected");
         Assert.assertEquals(driver.findElement(By.cssSelector(checkOutDateField)).getText(),
                 departureWeekday + ", " + departureMonth + " " + departureDate + ", " + departureYear,
@@ -82,29 +82,14 @@ public class BookingTest extends BaseTest {
         driver.findElement(By.cssSelector(searchButton)).click();
     }
 
-    public void selectArrivalDate() {
+    public void selectDate(String monthFind, String dateFind) {
         List<WebElement> month = driver.findElements(By.cssSelector(monthsSelector));
         for (WebElement monthArrival : month) {
-            if (monthArrival.findElement(By.cssSelector(monthSelector)).getText().equals(arrivalMonth + " " + arrivalYear)) {
+            if (monthArrival.findElement(By.cssSelector(monthSelector)).getText().equals(monthFind + " " + year)) {
                 List<WebElement> days = monthArrival.findElements(By.cssSelector(daySelector));
                 for (WebElement arrivalDay : days) {
-                    if (arrivalDay.getText().equals(arrivalDate)) {
+                    if (arrivalDay.getText().equals(dateFind)) {
                         arrivalDay.click();
-                        break;
-                    }
-                }
-            }
-        }
-    }
-
-    public void selectDepartureDate() {
-        List<WebElement> month = driver.findElements(By.cssSelector(monthsSelector));
-        for (WebElement monthDeparture : month) {
-            if (monthDeparture.findElement(By.cssSelector(monthSelector)).getText().equals(departureMonth + " " + departureYear)) {
-                List<WebElement> days = monthDeparture.findElements(By.cssSelector(daySelector));
-                for (WebElement departureDay : days) {
-                    if (departureDay.getText().equals(departureDate)) {
-                        departureDay.click();
                         break;
                     }
                 }
