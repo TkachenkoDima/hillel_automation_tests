@@ -103,6 +103,8 @@ public class BookingTest extends BaseTest {
             double minScore = 9.0;
                 Assert.assertTrue(Double.parseDouble((score.getText())) >= minScore,
                         "Hotel score is not as expected");
+
+            System.out.println(score.getText());
         }
     }
 }

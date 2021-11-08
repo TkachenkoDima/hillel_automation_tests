@@ -24,4 +24,10 @@
             </class>
         </classes>
     </test>
+    <test name="Homework 20 tests">
+        <classes>
+            <class name="Homeworks.Homework20.RozetkaTest">
+            </class>
+        </classes>
+    </test>
 </suite>
