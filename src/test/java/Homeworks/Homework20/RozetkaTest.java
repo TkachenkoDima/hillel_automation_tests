@@ -28,9 +28,11 @@ public class RozetkaTest extends BaseTest {
     private final String submitPriceButton = "button[type='submit']";
     private final String itemPrice = "span.goods-tile__price-value";
     private final String itemTitle = "span.goods-tile__title";
+    private final String compareButton = "button[class^='compare-button";
 
     private final String minPrice = "5000";
     private final String maxPrice = "15000";
+    int monitorPrice;
 
     @BeforeMethod(alwaysRun = true)
     public void preConditions() {
@@ -91,18 +93,40 @@ public class RozetkaTest extends BaseTest {
         Thread.sleep(3000);
         driver.findElement(By.cssSelector(monitorLocator)).click();
         Thread.sleep(3000);
+        findProductLessMinPrice();
+        Thread.sleep(3000);
+        driver.findElement(By.cssSelector(compareButton)).click();
+        driver.navigate().back();
+        findProductLessLessPrice("");
+        System.out.println("kek");
 
+
+    }
+
+    public void findProductLessLessPrice(String monitorPrice) {
         List<WebElement> monitors = driver.findElements(By.cssSelector(monitorItemCard));
         for (WebElement monitor : monitors) {
-            List<WebElement> monitorPrice = monitor.findElements(By.cssSelector(itemPrice));
-            for (WebElement price : monitorPrice) {
-                String replacedPrice = price.getText().replaceAll("[^0-9]", "");
-                System.out.println(replacedPrice);
-                if (Integer.parseInt(replacedPrice) < 5000) {
-                    break;
-                }
+            String secondMonitorPrice = monitor.findElement(By.cssSelector(itemPrice)).getText().replaceAll("[^0-9]", "");
+            if (Integer.parseInt(secondMonitorPrice) < Integer.parseInt(monitorPrice)) {
+                monitor.click();
+                System.out.println(monitorPrice);
+            }
+            else {
+                System.out.println("no such monitor");
             }
         }
+    }
+
+    public int findProductLessMinPrice() {
+        List<WebElement> monitors = driver.findElements(By.cssSelector(monitorItemCard));
+        for (WebElement monitor : monitors) {
+            String monitorPrice = monitor.findElement(By.cssSelector(itemPrice)).getText().replaceAll("[^0-9]", "");
+            if (Integer.parseInt(monitorPrice) < 5000) {
+                monitor.click();
+            }
+        }
+        int lessPrice = 0;
+        return lessPrice;
     }
 
     public void fillSearchFiled(String searchItem) {
