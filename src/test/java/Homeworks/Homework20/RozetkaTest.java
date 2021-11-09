@@ -17,8 +17,8 @@ public class RozetkaTest extends BaseTest {
     private final String searchInput = "samsung";
     private final String mobilePhonesFiltersLocator = "//span[text()='Мобильные телефоны']";
     private final String computerAndLaptopsLocator = "Ноутбуки и компьютеры";
-    private final String monitorLocator = "a[title='Мониторы']";
-    private final String monitorItemCard = "div.goods-tile__inner";
+    private final String monitorsCategoryLocator = "a[title='Мониторы']";
+    private final String monitorItemCard = "li[class^='catalog-grid__cell']";
     private final String appleCheckBox = "label[for='Apple']";
     private final String huaweiCheckBox = "label[for='Huawei']";
     private final String memoryCheckBox = "label[for='128 ГБ']";
@@ -26,13 +26,20 @@ public class RozetkaTest extends BaseTest {
     private final String minPriceInput = "input[formcontrolname='min']";
     private final String maxPriceInput = "input[formcontrolname='max']";
     private final String submitPriceButton = "button[type='submit']";
-    private final String itemPrice = "span.goods-tile__price-value";
+    private final String itemPrice = "div[class^='goods-tile__price--old']";
     private final String itemTitle = "span.goods-tile__title";
     private final String compareButton = "button[class^='compare-button";
+    private final String monitorTitle = "h1.product__title";
+    private final String monitorPrice = "p[class^='product-prices__small']";
+    private final String compareIcon = "span[class^='counter'";
+    private final String compareModal = "li[class^='comparison-modal'";
+    private final String compareItemsList = "li[class^='products-grid__cell'";
+    private final String oldPrice = "li[class^='products-grid__cell'";
+
 
     private final String minPrice = "5000";
     private final String maxPrice = "15000";
-    int monitorPrice;
+    private final int price = 6000;
 
     @BeforeMethod(alwaysRun = true)
     public void preConditions() {
@@ -42,91 +49,111 @@ public class RozetkaTest extends BaseTest {
     public void postConditions() {
     }
 
-//    @Test
-//    public void checkProductBrand() throws InterruptedException {
-//        driver.get(url);
-//        fillSearchFiled(searchInput);
-//        Thread.sleep(1000);
-//        clickMobilePhonesCategory();
-//        Thread.sleep(1000);
-//        clickBrandCheckbox(appleCheckBox);
-//        Thread.sleep(1000);
-//        clickBrandCheckbox(huaweiCheckBox);
-//        Thread.sleep(1000);
-//        checkProductTitle();
-//
-//    }
-//
-//    @Test
-//    public void checkPriceRange() throws InterruptedException {
-//        driver.get(url);
-//        fillSearchFiled(searchInput);
-//        Thread.sleep(1000);
-//        clickMobilePhonesCategory();
-//        setPrice(minPriceInput, minPrice);
-//        setPrice(maxPriceInput, maxPrice);
-//        clickSubmitButton();
-//        Thread.sleep(1000);
-//        checkPrice(minPrice, maxPrice);
-//    }
-//
-//    @Test
-//    public void checkFilters() throws InterruptedException {
-//        driver.get(url);
-//        fillSearchFiled(searchInput);
-//        Thread.sleep(1000);
-//        clickMobilePhonesCategory();
-//        Thread.sleep(1000);
-//        clickMemoryCheckBox(memoryCheckBox);
-//        Thread.sleep(1000);
-//        clickColorCheckBox(whiteColorCheckBox);
-//        Thread.sleep(1000);
-//
-//        checkSelectedFilters();
-//
-//    }
+    @Test
+    public void checkProductBrand() throws InterruptedException {
+        driver.get(url);
+        fillSearchFiled(searchInput);
+        Thread.sleep(1000);
+        clickMobilePhonesCategory();
+        Thread.sleep(1000);
+        clickBrandCheckbox(appleCheckBox);
+        Thread.sleep(1000);
+        clickBrandCheckbox(huaweiCheckBox);
+        Thread.sleep(1000);
+        checkProductTitle();
+
+    }
+
+    @Test
+    public void checkPriceRange() throws InterruptedException {
+        driver.get(url);
+        fillSearchFiled(searchInput);
+        Thread.sleep(1000);
+        clickMobilePhonesCategory();
+        setPrice(minPriceInput, minPrice);
+        setPrice(maxPriceInput, maxPrice);
+        clickSubmitButton();
+        Thread.sleep(2000);
+        checkPrice(minPrice, maxPrice);
+    }
+
+    @Test
+    public void checkFilters() throws InterruptedException {
+        driver.get(url);
+        fillSearchFiled(searchInput);
+        Thread.sleep(1000);
+        clickMobilePhonesCategory();
+        Thread.sleep(1000);
+        clickMemoryCheckBox(memoryCheckBox);
+        Thread.sleep(1000);
+        clickColorCheckBox(whiteColorCheckBox);
+        Thread.sleep(1000);
+
+        checkSelectedFilters();
+
+    }
 
     @Test
     public void compareProducts() throws InterruptedException {
         driver.get(url);
-        driver.findElement(By.linkText(computerAndLaptopsLocator)).click();
+        clickComputersAndLaptopsCategory();
         Thread.sleep(3000);
-        driver.findElement(By.cssSelector(monitorLocator)).click();
-        Thread.sleep(3000);
-        findProductLessMinPrice();
-        Thread.sleep(3000);
-        driver.findElement(By.cssSelector(compareButton)).click();
+        clickMonitors();
+        Thread.sleep(1000);
+        clickOnProductWithPriceLessThan(price);
+        Thread.sleep(1000);
+        int firstMonitorPrice = getMonitorPrice();
+        String firstMonitorName = getMonitorName();
+        clickCompareSingleItem();
+        Thread.sleep(1000);
+        Assert.assertTrue(driver.findElement(By.cssSelector(compareIcon)).isDisplayed(),
+                "Compare items icon is not displayed");
+        Assert.assertEquals(driver.findElement(By.cssSelector("span[class^='counter'")).getText(), "1",
+                "Not valid count of items presented");
         driver.navigate().back();
-        findProductLessLessPrice("");
-        System.out.println("kek");
+        Thread.sleep(5000);
+        clickOnProductWithPriceLessThan(firstMonitorPrice);
+        Thread.sleep(3000);
+        clickCompareSingleItem();
+        Thread.sleep(2000);
+        int secondMonitorPrice = getMonitorPrice();
+        String secondMonitorName = getMonitorName();
+        Assert.assertEquals(driver.findElement(By.cssSelector(compareIcon)).getText(), "2",
+                "Not valid count of items presented");
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(compareIcon)).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(compareModal)).click();
+        Thread.sleep(2000);
 
-
-    }
-
-    public void findProductLessLessPrice(String monitorPrice) {
-        List<WebElement> monitors = driver.findElements(By.cssSelector(monitorItemCard));
-        for (WebElement monitor : monitors) {
-            String secondMonitorPrice = monitor.findElement(By.cssSelector(itemPrice)).getText().replaceAll("[^0-9]", "");
-            if (Integer.parseInt(secondMonitorPrice) < Integer.parseInt(monitorPrice)) {
-                monitor.click();
-                System.out.println(monitorPrice);
-            }
-            else {
-                System.out.println("no such monitor");
-            }
+        List<WebElement> productsToCompare = driver.findElements(By.cssSelector(compareItemsList));
+        for (WebElement compare : productsToCompare) {
+            String convertedPrice = compare.findElement(By.cssSelector(oldPrice)).getText().replaceAll("[^0-9]", "");
+            Assert.assertTrue(compare.getText().contains(firstMonitorName) || compare.getText().contains(secondMonitorName),
+                        "Products titles not as expected");
+            Assert.assertTrue(convertedPrice.contains(String.valueOf(firstMonitorPrice)) || convertedPrice.contains(String.valueOf(secondMonitorPrice)) ,
+            "Products prices not as expected");
         }
     }
 
-    public int findProductLessMinPrice() {
+    public void clickOnProductWithPriceLessThan(int price) {
         List<WebElement> monitors = driver.findElements(By.cssSelector(monitorItemCard));
         for (WebElement monitor : monitors) {
             String monitorPrice = monitor.findElement(By.cssSelector(itemPrice)).getText().replaceAll("[^0-9]", "");
-            if (Integer.parseInt(monitorPrice) < 5000) {
+            if (Integer.parseInt(monitorPrice) < price) {
                 monitor.click();
+                break;
             }
         }
-        int lessPrice = 0;
-        return lessPrice;
+    }
+
+    public String getMonitorName() {
+        return (driver.findElement(By.cssSelector(monitorTitle)).getText());
+    }
+
+
+    public int getMonitorPrice() {
+        return Integer.parseInt(String.valueOf(driver.findElement(By.cssSelector(monitorPrice)).getText()).replaceAll("[^0-9]", ""));
     }
 
     public void fillSearchFiled(String searchItem) {
@@ -147,6 +174,18 @@ public class RozetkaTest extends BaseTest {
 
     public void clickMemoryCheckBox(String memory) {
         driver.findElement(By.cssSelector(memory)).click();
+    }
+
+    public void clickComputersAndLaptopsCategory() {
+        driver.findElement(By.linkText(computerAndLaptopsLocator)).click();
+    }
+
+    public void clickMonitors() {
+        driver.findElement(By.cssSelector(monitorsCategoryLocator)).click();
+    }
+
+    public void clickCompareSingleItem() {
+        driver.findElement(By.cssSelector(compareButton)).click();
     }
 
     public void clickColorCheckBox(String color) {
@@ -194,7 +233,6 @@ public class RozetkaTest extends BaseTest {
     public void checkProductTitle() {
         List<WebElement> itemTitles = driver.findElements(By.cssSelector(itemTitle));
         for (WebElement itemTitle : itemTitles) {
-            System.out.println(itemTitle.getText());
             Assert.assertTrue((itemTitle.getText().toLowerCase().contains("samsung")) || (itemTitle.getText().toLowerCase().contains("apple")) || (itemTitle.getText().toLowerCase().contains("huawei")),
                     "Expected product title does not exist");
         }
