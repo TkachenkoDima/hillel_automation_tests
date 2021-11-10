@@ -46,6 +46,7 @@ public class RozetkaTest extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void preConditions() {
+        driver.get(url);
     }
 
     @AfterMethod(alwaysRun = true)
@@ -54,7 +55,6 @@ public class RozetkaTest extends BaseTest {
 
     @Test
     public void checkProductBrand() {
-        driver.get(url);
         fillSearchFiled(searchInput);
         clickMobilePhonesCategory();
         clickBrandCheckbox(appleCheckBox);
@@ -65,7 +65,6 @@ public class RozetkaTest extends BaseTest {
 
     @Test
     public void checkPriceRange() {
-        driver.get(url);
         fillSearchFiled(searchInput);
         clickMobilePhonesCategory();
         setPrice(minPriceInput, minPrice);
@@ -76,7 +75,6 @@ public class RozetkaTest extends BaseTest {
 
     @Test
     public void checkFilters() {
-        driver.get(url);
         fillSearchFiled(searchInput);
         clickMobilePhonesCategory();
         waitFor(memoryCheckBox);
@@ -89,7 +87,6 @@ public class RozetkaTest extends BaseTest {
 
     @Test
     public void compareProducts() {
-        driver.get(url);
         clickComputersAndLaptopsCategory();
         clickMonitors();
         clickOnProductWithPriceLessThan(price);
