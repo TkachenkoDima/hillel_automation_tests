@@ -108,6 +108,7 @@ public class RozetkaTest extends BaseTest {
         Assert.assertEquals(driver.findElement(By.cssSelector(compareIcon)).getText(), "2",
                 "Not valid count of items presented");
         clickCompareHeaderIcon();
+        waitFor(compareModal);
         clickCompareItemsInModal();
 
         waitFor(comparisonPageTitle);
