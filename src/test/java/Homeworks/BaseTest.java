@@ -22,9 +22,6 @@ public abstract class BaseTest {
 
     @BeforeTest(alwaysRun = true)
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));

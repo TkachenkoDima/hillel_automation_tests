@@ -5,6 +5,7 @@ import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,14 +28,16 @@ public class RozetkaTest extends BaseTest {
     private final String maxPriceInput = "input[formcontrolname='max']";
     private final String submitPriceButton = "button[type='submit']";
     private final String itemPrice = "div[class^='goods-tile__price--old']";
+    private final String discountedPrice = "div.goods-tile__price-value";
     private final String itemTitle = "span.goods-tile__title";
-    private final String compareButton = "button[class^='compare-button";
+    private final String compareButton = "button[class^='compare-button']";
     private final String monitorTitle = "h1.product__title";
     private final String monitorPrice = "p[class^='product-prices__small']";
-    private final String compareIcon = "span[class^='counter'";
-    private final String compareModal = "li[class^='comparison-modal'";
-    private final String compareItemsList = "li[class^='products-grid__cell'";
-    private final String oldPrice = "li[class^='products-grid__cell'";
+    private final String compareIcon = "span[class^='counter']";
+    private final String compareModal = "li[class^='comparison-modal']";
+    private final String compareItemsList = "li[class^='products-grid__cell']";
+    private final String oldPrice = "div.product__price--old";
+    private final String comparisonPageTitle = "h1.comparison__heading";
 
 
     private final String minPrice = "5000";
@@ -50,82 +53,67 @@ public class RozetkaTest extends BaseTest {
     }
 
     @Test
-    public void checkProductBrand() throws InterruptedException {
+    public void checkProductBrand() {
         driver.get(url);
         fillSearchFiled(searchInput);
-        Thread.sleep(1000);
         clickMobilePhonesCategory();
-        Thread.sleep(1000);
         clickBrandCheckbox(appleCheckBox);
-        Thread.sleep(1000);
         clickBrandCheckbox(huaweiCheckBox);
-        Thread.sleep(1000);
+        waitFor(itemTitle);
         checkProductTitle();
-
     }
 
     @Test
-    public void checkPriceRange() throws InterruptedException {
+    public void checkPriceRange() {
         driver.get(url);
         fillSearchFiled(searchInput);
-        Thread.sleep(1000);
         clickMobilePhonesCategory();
         setPrice(minPriceInput, minPrice);
         setPrice(maxPriceInput, maxPrice);
         clickSubmitButton();
-        Thread.sleep(2000);
         checkPrice(minPrice, maxPrice);
     }
 
     @Test
-    public void checkFilters() throws InterruptedException {
+    public void checkFilters() {
         driver.get(url);
         fillSearchFiled(searchInput);
-        Thread.sleep(1000);
         clickMobilePhonesCategory();
-        Thread.sleep(1000);
+        waitFor(memoryCheckBox);
         clickMemoryCheckBox(memoryCheckBox);
-        Thread.sleep(1000);
+        waitFor(whiteColorCheckBox);
         clickColorCheckBox(whiteColorCheckBox);
-        Thread.sleep(1000);
-
+        waitFor(itemTitle);
         checkSelectedFilters();
-
     }
 
     @Test
-    public void compareProducts() throws InterruptedException {
+    public void compareProducts() {
         driver.get(url);
         clickComputersAndLaptopsCategory();
-        Thread.sleep(3000);
         clickMonitors();
-        Thread.sleep(1000);
         clickOnProductWithPriceLessThan(price);
-        Thread.sleep(1000);
         int firstMonitorPrice = getMonitorPrice();
         String firstMonitorName = getMonitorName();
         clickCompareSingleItem();
-        Thread.sleep(1000);
+        waitFor(compareIcon);
         Assert.assertTrue(driver.findElement(By.cssSelector(compareIcon)).isDisplayed(),
                 "Compare items icon is not displayed");
-        Assert.assertEquals(driver.findElement(By.cssSelector("span[class^='counter'")).getText(), "1",
+        Assert.assertEquals(driver.findElement(By.cssSelector(compareIcon)).getText(), "1",
                 "Not valid count of items presented");
         driver.navigate().back();
-        Thread.sleep(5000);
         clickOnProductWithPriceLessThan(firstMonitorPrice);
-        Thread.sleep(3000);
-        clickCompareSingleItem();
-        Thread.sleep(2000);
         int secondMonitorPrice = getMonitorPrice();
         String secondMonitorName = getMonitorName();
+        clickCompareSingleItem();
+
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(compareIcon)), "2"));
         Assert.assertEquals(driver.findElement(By.cssSelector(compareIcon)).getText(), "2",
                 "Not valid count of items presented");
-        Thread.sleep(2000);
-        driver.findElement(By.cssSelector(compareIcon)).click();
-        Thread.sleep(2000);
-        driver.findElement(By.cssSelector(compareModal)).click();
-        Thread.sleep(2000);
+        clickCompareHeaderIcon();
+        clickCompareItemsInModal();
 
+        waitFor(comparisonPageTitle);
         List<WebElement> productsToCompare = driver.findElements(By.cssSelector(compareItemsList));
         for (WebElement compare : productsToCompare) {
             String convertedPrice = compare.findElement(By.cssSelector(oldPrice)).getText().replaceAll("[^0-9]", "");
@@ -134,6 +122,10 @@ public class RozetkaTest extends BaseTest {
             Assert.assertTrue(convertedPrice.contains(String.valueOf(firstMonitorPrice)) || convertedPrice.contains(String.valueOf(secondMonitorPrice)) ,
             "Products prices not as expected");
         }
+    }
+
+    public void waitFor(String element) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(element)));
     }
 
     public void clickOnProductWithPriceLessThan(int price) {
@@ -147,12 +139,21 @@ public class RozetkaTest extends BaseTest {
         }
     }
 
+    public void clickCompareHeaderIcon() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(compareIcon))).click();
+    }
+
+    public void clickCompareItemsInModal() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(compareModal))).click();
+
+    }
+
     public String getMonitorName() {
         return (driver.findElement(By.cssSelector(monitorTitle)).getText());
     }
 
-
     public int getMonitorPrice() {
+        wait.until((ExpectedConditions.presenceOfElementLocated(By.cssSelector(monitorPrice))));
         return Integer.parseInt(String.valueOf(driver.findElement(By.cssSelector(monitorPrice)).getText()).replaceAll("[^0-9]", ""));
     }
 
@@ -165,7 +166,7 @@ public class RozetkaTest extends BaseTest {
     }
 
     public void clickMobilePhonesCategory() {
-        driver.findElement(By.xpath(mobilePhonesFiltersLocator)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(mobilePhonesFiltersLocator))).click();
     }
 
     public void clickSubmitButton() {
@@ -177,15 +178,15 @@ public class RozetkaTest extends BaseTest {
     }
 
     public void clickComputersAndLaptopsCategory() {
-        driver.findElement(By.linkText(computerAndLaptopsLocator)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(computerAndLaptopsLocator))).click();
     }
 
     public void clickMonitors() {
-        driver.findElement(By.cssSelector(monitorsCategoryLocator)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(monitorsCategoryLocator))).click();
     }
 
     public void clickCompareSingleItem() {
-        driver.findElement(By.cssSelector(compareButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(compareButton))).click();
     }
 
     public void clickColorCheckBox(String color) {
@@ -210,7 +211,7 @@ public class RozetkaTest extends BaseTest {
     }
 
     public void checkPrice(String minPrice, String maxPrice) {
-        List<WebElement> prices = driver.findElements(By.cssSelector(itemPrice));
+        List<WebElement> prices = driver.findElements(By.cssSelector(discountedPrice));
         for (WebElement price : prices) {
             String replacedPrices = price.getText().replace(" ", "");
             final boolean replacedMinPrice = Integer.parseInt(replacedPrices) >= Integer.parseInt(minPrice);
