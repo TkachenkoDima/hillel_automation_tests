@@ -27,8 +27,6 @@ public abstract class BaseTest {
         driver = new ChromeDriver();
         actions = new Actions(driver);
         js = (JavascriptExecutor)driver;
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Locale.setDefault(new Locale("US"));
         System.setProperty("chromeoptions.args", "--window-size=1920x1080");
     }
