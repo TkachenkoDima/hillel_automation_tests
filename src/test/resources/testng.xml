@@ -30,4 +30,11 @@
             </class>
         </classes>
     </test>
+    <test name="Homework 21 tests">
+        <classes>
+            <class name="Homeworks.Homework21.DragNDropTest"/>
+            <class name="Homeworks.Homework21.iFrameTest"/>
+            <class name="Homeworks.Homework21.SwitchTabsText"/>
+        </classes>
+    </test>
 </suite>
