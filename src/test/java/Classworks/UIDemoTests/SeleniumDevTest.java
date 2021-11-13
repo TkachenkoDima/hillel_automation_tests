@@ -1,4 +1,4 @@
-package Classwork18.UIDemoTests;
+package Classworks.UIDemoTests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -4,9 +4,9 @@
 
     <test name="Classwork 16 tests">
         <classes>
-            <class name="Classwork18.EvenNumberTest"/>
-            <class name="Classwork18.NumberInPowerTest"/>
-            <class name="Classwork18.StringReverseTest"/>
+            <class name="Classworks.EvenNumberTest"/>
+            <class name="Classworks.NumberInPowerTest"/>
+            <class name="Classworks.StringReverseTest"/>
         </classes>
     </test>
 
