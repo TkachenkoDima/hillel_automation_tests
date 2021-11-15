@@ -1,4 +1,4 @@
-package Classwork18;
+package Classworks;
 
 public class NumberInPower {
 
