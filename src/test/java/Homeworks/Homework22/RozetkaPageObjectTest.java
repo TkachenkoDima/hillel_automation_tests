@@ -44,16 +44,18 @@ public class RozetkaPageObjectTest extends BaseTest {
     }
 
     @Test
-    public void checkPriceRange() {
+    public void checkPriceRange() throws InterruptedException {
         rozetkaMainPage.performSearch("Samsung");
         rozetkaProductsPage.clickMobilePhonesCategory()
             .setPriceRange(minPrice, maxPrice);
+        Thread.sleep(1000);
         rozetkaProductsPage.clickSubmitPriceRangeButton();
+        Thread.sleep(1000);
         checkPrice(minPrice, maxPrice);
     }
 
     @Test
-    public void checkFilters() throws InterruptedException {
+    public void checkFilters() {
         rozetkaMainPage.performSearch("Samsung");
         rozetkaProductsPage.clickMobilePhonesCategory()
                 .click128GBMemoryCheckBox()
@@ -76,12 +78,12 @@ public class RozetkaPageObjectTest extends BaseTest {
         int secondMonitorPrice = rozetkaProductSinglePage.getMonitorPrice();
         String secondMonitorName = rozetkaProductSinglePage.getMonitorName();
         rozetkaProductSinglePage.clickCompareSingleItem();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(rozetkaMainPage.getCartLabelText(), "2",
                 "Not valid count of items presented");
         rozetkaMainPage.clickCompareHeaderIcon()
         .clickCompareItemsInModal();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         checkMonitorsTitles(firstMonitorName, secondMonitorName);
         checkMonitorsPrices(firstMonitorPrice, secondMonitorPrice);
     }
