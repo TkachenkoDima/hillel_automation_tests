@@ -30,24 +30,28 @@ public class RozetkaMainPage extends BasePage {
         return driver.findElements(cartCounter).isEmpty();
     }
 
-    public void clickMonitors() {
+    public RozetkaMainPage clickMonitors() {
         driver.findElement(monitorsCategoryLocator).click();
+        return this;
     }
 
-    public void clickCompareItemsInModal() {
+    public RozetkaMainPage clickCompareItemsInModal() {
        driver.findElement(compareModal).click();
+       return this;
     }
 
-    public void clickCompareHeaderIcon() {
+    public RozetkaMainPage clickCompareHeaderIcon() {
         driver.findElement(compareIcon).click();
+        return this;
     }
 
     public String getCartLabelText() {
         return driver.findElement(cartCounter).getText();
     }
 
-    public void clickComputerAndLaptopsCategory() {
+    public RozetkaMainPage clickComputerAndLaptopsCategory() {
         driver.findElement(computerAndLaptopsLocator).click();
+        return this;
     }
 
     public void performSearch(String searchText) {
@@ -55,11 +59,13 @@ public class RozetkaMainPage extends BasePage {
         clickSearchButton();
     }
 
-    public void enterTextIntoSearchField(String searchText) {
+    public RozetkaMainPage enterTextIntoSearchField(String searchText) {
         driver.findElement(searchField).sendKeys(searchText);
+        return this;
     }
 
-    public void clickSearchButton() {
+    public RozetkaMainPage clickSearchButton() {
         driver.findElement(searchButton).click();
+        return this;
     }
 }

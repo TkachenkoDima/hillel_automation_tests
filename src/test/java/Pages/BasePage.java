@@ -14,8 +14,8 @@ public class BasePage {
     protected Actions actions;
     JavascriptExecutor js;
 
-    public BasePage(WebDriver webDriver) {
-        this.driver = webDriver;
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         actions = new Actions(driver);
         js = (JavascriptExecutor)driver;

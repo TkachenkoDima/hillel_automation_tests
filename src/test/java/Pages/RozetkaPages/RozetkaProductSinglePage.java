@@ -8,9 +8,6 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class RozetkaProductSinglePage extends BasePage {
-    By selectedProductTitle = By.cssSelector("h1.product__title");
-    By buyButton = By.cssSelector("span.buy-button__label");
-    By closeModalWindowButton = By.cssSelector("button.modal__close");
     By monitorTitle = By.cssSelector("h1.product__title");
     By monitorPrice = By.cssSelector("p[class^='product-prices__small']");
     By compareButton = By.cssSelector("button[class^='compare-button']");
@@ -20,8 +17,9 @@ public class RozetkaProductSinglePage extends BasePage {
         super(driver);
     }
 
-    public void clickCompareSingleItem() {
+    public RozetkaProductSinglePage clickCompareSingleItem() {
        driver.findElement(compareButton).click();
+       return this;
     }
 
     public String getMonitorName() {

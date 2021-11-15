@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class RozetkaTest extends BaseTest {
+public class RozetkaPageObjectTest extends BaseTest {
     private final String url = "https://rozetka.com.ua/";
     private final String minPrice = "5000";
     private final String maxPrice = "15000";
@@ -23,54 +23,48 @@ public class RozetkaTest extends BaseTest {
     RozetkaProductsPage rozetkaProductsPage;
     RozetkaProductSinglePage rozetkaProductSinglePage;
 
-
     @BeforeMethod(alwaysRun = true)
     public void preConditions() {
         driver.get(url);
-        rozetkaProductSinglePage = new RozetkaProductSinglePage(driver);
         rozetkaMainPage = new RozetkaMainPage(driver);
+        rozetkaProductsPage = new RozetkaProductsPage(driver);
+        rozetkaProductSinglePage = new RozetkaProductSinglePage(driver);
     }
 
     @Test
-    public void checkProductBrand() {
-        rozetkaProductsPage = new RozetkaProductsPage(driver);
-
+    public void checkProductBrand() throws InterruptedException {
         rozetkaMainPage.performSearch("Samsung");
         rozetkaProductsPage.clickMobilePhonesCategory();
+        Thread.sleep(1000);
         rozetkaProductsPage.clickAppleBrandCheckbox();
+        Thread.sleep(1000);
         rozetkaProductsPage.clickHuaweiBrandCheckbox();
+        Thread.sleep(1000);
         checkProductTitle();
     }
 
     @Test
-    public void checkPriceRange() throws InterruptedException {
+    public void checkPriceRange() {
         rozetkaMainPage.performSearch("Samsung");
-        Thread.sleep(3000);
-        rozetkaProductsPage.clickMobilePhonesCategory();
-        Thread.sleep(3000);
-        rozetkaProductsPage.setPriceRange(minPrice, maxPrice);
-        Thread.sleep(3000);
+        rozetkaProductsPage.clickMobilePhonesCategory()
+            .setPriceRange(minPrice, maxPrice);
         rozetkaProductsPage.clickSubmitPriceRangeButton();
-        Thread.sleep(1000);
         checkPrice(minPrice, maxPrice);
     }
 
     @Test
     public void checkFilters() throws InterruptedException {
         rozetkaMainPage.performSearch("Samsung");
-        rozetkaProductsPage.clickMobilePhonesCategory();
-        Thread.sleep(3000);
-        rozetkaProductsPage.click128GBMemoryCheckBox();
-        Thread.sleep(3000);
-        rozetkaProductsPage.clickWhiteColorFilterCheckBox();
-        Thread.sleep(3000);
+        rozetkaProductsPage.clickMobilePhonesCategory()
+                .click128GBMemoryCheckBox()
+                .clickWhiteColorFilterCheckBox();
         checkSelectedFilters();
     }
 
     @Test
     public void compareProducts() throws InterruptedException {
-        rozetkaMainPage.clickComputerAndLaptopsCategory();
-        rozetkaMainPage.clickMonitors();
+        rozetkaMainPage.clickComputerAndLaptopsCategory()
+        .clickMonitors();
         rozetkaProductsPage.clickOnProductWithPriceLessThan(price);
         int firstMonitorPrice = rozetkaProductSinglePage.getMonitorPrice();
         String firstMonitorName = rozetkaProductSinglePage.getMonitorName();
@@ -85,13 +79,11 @@ public class RozetkaTest extends BaseTest {
         Thread.sleep(2000);
         Assert.assertEquals(rozetkaMainPage.getCartLabelText(), "2",
                 "Not valid count of items presented");
-        rozetkaMainPage.clickCompareHeaderIcon();
-        Thread.sleep(3000);
-        rozetkaMainPage.clickCompareItemsInModal();
+        rozetkaMainPage.clickCompareHeaderIcon()
+        .clickCompareItemsInModal();
         Thread.sleep(3000);
         checkMonitorsTitles(firstMonitorName, secondMonitorName);
         checkMonitorsPrices(firstMonitorPrice, secondMonitorPrice);
-
     }
 
     private void checkMonitorsTitles(String firstMonitorName, String secondMonitorName) {

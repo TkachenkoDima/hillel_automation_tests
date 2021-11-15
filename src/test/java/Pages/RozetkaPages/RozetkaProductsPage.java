@@ -22,8 +22,6 @@ public class RozetkaProductsPage extends BasePage {
     By itemTitle = By.cssSelector("span.goods-tile__title");
     By monitorItemCard = By.cssSelector("li[class^='catalog-grid__cell']");
 
-
-
     public RozetkaProductsPage(WebDriver driver) {
         super(driver);
     }
@@ -53,27 +51,33 @@ public class RozetkaProductsPage extends BasePage {
         driver.findElement(maxPriceInput).sendKeys(maxPrice);
     }
 
-    public void clickWhiteColorFilterCheckBox() {
+    public RozetkaProductsPage clickWhiteColorFilterCheckBox() {
         driver.findElement(whiteColorCheckBox).click();
+        return this;
     }
 
-    public void clickSubmitPriceRangeButton() {
+    public RozetkaProductsPage clickSubmitPriceRangeButton() {
         driver.findElement(submitPriceButton).click();
+        return this;
     }
 
-    public void click128GBMemoryCheckBox() {
+    public RozetkaProductsPage click128GBMemoryCheckBox() {
         driver.findElement(memoryCheckBox).click();
+        return this;
     }
 
-    public void clickAppleBrandCheckbox() {
+    public RozetkaProductsPage clickAppleBrandCheckbox() {
         driver.findElement(appleCheckBox).click();
+        return this;
     }
 
-    public void clickHuaweiBrandCheckbox() {
+    public RozetkaProductsPage clickHuaweiBrandCheckbox() {
         driver.findElement(huaweiCheckBox).click();
+        return this;
     }
 
-    public void clickMobilePhonesCategory() {
+    public RozetkaProductsPage clickMobilePhonesCategory() {
         driver.findElement(mobilePhonesFiltersLocator).click();
+        return this;
     }
 }
