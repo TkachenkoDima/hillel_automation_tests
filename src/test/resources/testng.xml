@@ -20,14 +20,12 @@
 
     <test name="Homework 19 tests">
         <classes>
-            <class name="Homeworks.Homework19.BookingTest">
-            </class>
+            <class name="Homeworks.Homework19.BookingTest"/>
         </classes>
     </test>
     <test name="Homework 20 tests">
         <classes>
-            <class name="Homeworks.Homework20.RozetkaTest">
-            </class>
+            <class name="Homeworks.Homework20.RozetkaTest"/>
         </classes>
     </test>
     <test name="Homework 21 tests">
@@ -35,6 +33,13 @@
             <class name="Homeworks.Homework21.DragNDropTest"/>
             <class name="Homeworks.Homework21.iFrameTest"/>
             <class name="Homeworks.Homework21.SwitchTabsText"/>
+        </classes>
+    </test>
+    <test name="Homework 22 tests">
+        <classes>
+            <class name="Homeworks.Homework22.GoogleSearchTest"/>
+            <class name="Homeworks.Homework22.BookingPageObjectTest"/>
+            <class name="Homeworks.Homework22.RozetkaPageObjectTest"/>
         </classes>
     </test>
 </suite>
