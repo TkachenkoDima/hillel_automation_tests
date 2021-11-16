@@ -2,6 +2,7 @@ package Homeworks.Homework23;
 
 import Homeworks.BaseTest;
 import Pages.SportcheckPages.SportCheckPage;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,6 @@ public class SportCheckAddToCartTest extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void preConditions() {
-        driver.get(url);
     }
 
     @Test
@@ -20,8 +20,17 @@ public class SportCheckAddToCartTest extends BaseTest {
         sportCheckPage = new SportCheckPage(driver);
         driver.get(url);
         sportCheckPage.selectColor();
-        System.out.println("kek");
-
+        sportCheckPage.selectSize();
+        Assert.assertTrue(sportCheckPage.isInStockLabelDisplayed(),
+                "Label not displayed!");
+        sportCheckPage.clickQuantity(2);
+        sportCheckPage.clickAddToCartButton();
+        Assert.assertTrue(sportCheckPage.isCartModalWindowDisplayed(),
+                "Modal window is not displayed!");
+        sportCheckPage.moveToCartIcon();
+        Assert.assertEquals(sportCheckPage.getQuantity(), sportCheckPage.getCartQuantity(),
+                "Quantity not equals!");
+        Assert.assertEquals(sportCheckPage.getProductTitle(), sportCheckPage.getCartItemTitle(),
+                "Product title not as expected!");
     }
-
 }

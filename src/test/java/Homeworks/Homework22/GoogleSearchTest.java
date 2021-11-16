@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class GoogleSearchTest extends BaseTest {
     private final String url = "https://www.google.com/";
     private final String searchInput = "iphone kyiv buy";
-    private final String expectedWebsite = "kek";
+    private final String expectedWebsite = "allo.ua";
 
     GoogleMainPage googleMainPage;
     GoogleSearchResultPage googleSearchResultPage;
