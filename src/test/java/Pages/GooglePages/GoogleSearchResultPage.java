@@ -4,7 +4,6 @@ import Pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import java.util.List;
 
@@ -23,11 +22,6 @@ public class GoogleSearchResultPage extends BasePage {
 
     public String getSearchFieldText() {
         return driver.findElement(searchField).getAttribute("value");
-    }
-
-    public boolean getSiteName(){
-        driver.findElement(siteName).getText();
-        return true;
     }
 
     public void check(String expectedWebsite) {
@@ -50,7 +44,7 @@ public class GoogleSearchResultPage extends BasePage {
     }
 
 
-    public void checkResults(String expectedWebsite) throws SearchResultsException {
+    public boolean isSiteNameFoundOnFirst5Pages(String expectedWebsite) {
         int pageNum = 0;
         for (int i = 1; i <= 5; i++) {
             List<WebElement> searchResults = driver.findElements(siteName);
@@ -59,14 +53,13 @@ public class GoogleSearchResultPage extends BasePage {
                 if (link.contains(expectedWebsite)) {
                     pageNum = i;
                     System.out.println("Found on page: " + pageNum);
-                    return;
+                    return true;
                 }
             }
-            if ((i == 5)) {
-                throw new SearchResultsException("ALLO.UA not found on first 5 pages");
-            } else {
+            if (!(i == 5)) {
                 clickNextPage();
             }
         }
+        return false;
     }
 }

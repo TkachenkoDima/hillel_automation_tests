@@ -19,6 +19,8 @@ public class SportCheckAddToCartTest extends BaseTest {
     public void addItemToCart() {
         sportCheckPage = new SportCheckPage(driver);
         driver.get(url);
+        sportCheckPage.selectColor();
+        System.out.println("kek");
 
     }
 
