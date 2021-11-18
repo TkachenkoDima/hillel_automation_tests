@@ -29,7 +29,9 @@ public class TripMyDreamTest {
         $("td[data-date='" + arrivalDate + "']").click();
         $("td[data-date='" + departureDate + "']").click();
         $("div[class*='hc-sb-submit']").click();
-        switchTo().window(1);
+        switchTo().window(0);
+        closeWindow();
+        switchTo().window(0);
         sleep(2000);
         $("div[class^='popup__close']").click();
         $$("div[class^='s-form__input-wrap']").shouldHave(CollectionCondition.texts(departureCity, arrivalCity));
