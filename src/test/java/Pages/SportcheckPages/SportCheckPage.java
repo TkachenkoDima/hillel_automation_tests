@@ -33,9 +33,8 @@ public class SportCheckPage extends BasePage {
         for (WebElement color : colorsList) {
             if (!color.getAttribute("class").contains("selected")) {
                 color.click();
-                break;
+                return;
             }
-            break;
         }
     }
 
