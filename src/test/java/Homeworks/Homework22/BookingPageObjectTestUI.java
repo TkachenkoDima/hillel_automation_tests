@@ -1,6 +1,6 @@
 package Homeworks.Homework22;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import Pages.BookingPages.BookingHotelsPage;
 import Pages.BookingPages.BookingMainPage;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class BookingPageObjectTest extends BaseTest {
+public class BookingPageObjectTestUI extends UIBaseTest {
     private final String url = "https://booking.com/";
     private final String destination = "London";
 

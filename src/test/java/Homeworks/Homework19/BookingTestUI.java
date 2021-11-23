@@ -1,6 +1,6 @@
 package Homeworks.Homework19;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class BookingTest extends BaseTest {
+public class BookingTestUI extends UIBaseTest {
     private final String languageIcon = "//button[@data-modal-id='language-selection']";
     private final String englishLanguageIcon = "[lang|=en-us]";
     private final String searchDestinationButton = "#ss";

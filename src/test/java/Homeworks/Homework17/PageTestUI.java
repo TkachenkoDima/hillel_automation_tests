@@ -1,6 +1,6 @@
 package Homeworks.Homework17;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class PageTest extends BaseTest {
+public class PageTestUI extends UIBaseTest {
     private final String lmsURL = "https://lms.ithillel.ua/";
     private final String googleURL = "https://www.google.com/";
     private final String lmsTitle = "Hillel LMS | Система личных кабинетов Студентов Компьютерной школы Hillel";

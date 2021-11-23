@@ -1,12 +1,12 @@
 package Homeworks.Homework18;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PriceUaSearchSearchResultTest extends BaseTest {
+public class PriceUaSearchSearchResultTestUI extends UIBaseTest {
     private final String url = "https://price.ua/ua";
     private final String searchPhrase = "oculus";
     private final String expectedElementTitle = "Oculus Quest 2 256 Gb";

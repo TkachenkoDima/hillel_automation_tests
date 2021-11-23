@@ -1,6 +1,6 @@
 package Homeworks.Homework21;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class iFrameTest extends BaseTest {
+public class iFrameTestUI extends UIBaseTest {
     private final String url = "http://the-internet.herokuapp.com/iframe";
     private final String italicButton = "button[aria-label='Italic']";
     private final String italicButtonState = "aria-pressed";

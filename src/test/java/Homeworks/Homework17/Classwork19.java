@@ -1,12 +1,12 @@
 package Homeworks.Homework17;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Classwork19 extends BaseTest {
+public class Classwork19 extends UIBaseTest {
     private final String guruUrl = "https://demo.guru99.com/Agile_Project/Agi_V1/index.php";
     private final String login = "1303";
     private final String pass = "Guru99";
