@@ -1,19 +1,17 @@
 package Homeworks.Homework22;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import Pages.RozetkaPages.RozetkaMainPage;
 import Pages.RozetkaPages.RozetkaProductSinglePage;
 import Pages.RozetkaPages.RozetkaProductsPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class RozetkaPageObjectTest extends BaseTest {
+public class RozetkaPageObjectTestUI extends UIBaseTest {
     private final String url = "https://rozetka.com.ua/";
     private final String minPrice = "5000";
     private final String maxPrice = "15000";

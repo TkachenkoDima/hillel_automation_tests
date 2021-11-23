@@ -1,6 +1,6 @@
 package Homeworks.Homework18;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class SauceDemoTest extends BaseTest {
+public class SauceDemoTestUI extends UIBaseTest {
     private final String url = "https://www.saucedemo.com";
     private final String login = "standard_user";
     private final String pass = "secret_sauce";

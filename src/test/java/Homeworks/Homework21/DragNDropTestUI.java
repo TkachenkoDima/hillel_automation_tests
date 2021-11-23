@@ -1,12 +1,12 @@
 package Homeworks.Homework21;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DragNDropTest extends BaseTest {
+public class DragNDropTestUI extends UIBaseTest {
     private final String url = "http://demo.guru99.com/test/drag_drop.html";
 
     @Test

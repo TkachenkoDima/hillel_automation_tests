@@ -1,13 +1,13 @@
 package Homeworks.Homework22;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import Pages.GooglePages.GoogleMainPage;
 import Pages.GooglePages.GoogleSearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class GoogleSearchTest extends BaseTest {
+public class GoogleSearchTestUI extends UIBaseTest {
     private final String url = "https://www.google.com/";
     private final String searchInput = "iphone kyiv buy";
     private final String expectedWebsite = "allo.ua";

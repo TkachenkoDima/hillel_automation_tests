@@ -1,6 +1,6 @@
 package Homeworks.Homework20;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class RozetkaTest extends BaseTest {
+public class RozetkaTestUI extends UIBaseTest {
     private final String url = "https://rozetka.com.ua/";
     private final String headerSearchLocator = "input[name=search]";
     private final String searchInput = "samsung";

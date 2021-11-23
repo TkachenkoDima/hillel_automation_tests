@@ -12,34 +12,34 @@
 
     <test name="Homework 18 tests">
         <classes>
-            <class name="Homeworks.Homework18.SauceDemoTest"/>
-            <class name="Homeworks.Homework18.PriceUaSearchSearchResultTest"/>
-            <class name="Homeworks.Homework18.Guru99Test"/>
+            <class name="Homeworks.Homework18.SauceDemoTestUI"/>
+            <class name="Homeworks.Homework18.PriceUaSearchSearchResultTestUI"/>
+            <class name="Homeworks.Homework18.Guru99TestUI"/>
         </classes>
     </test>
 
     <test name="Homework 19 tests">
         <classes>
-            <class name="Homeworks.Homework19.BookingTest"/>
+            <class name="Homeworks.Homework19.BookingTestUI"/>
         </classes>
     </test>
     <test name="Homework 20 tests">
         <classes>
-            <class name="Homeworks.Homework20.RozetkaTest"/>
+            <class name="Homeworks.Homework20.RozetkaTestUI"/>
         </classes>
     </test>
     <test name="Homework 21 tests">
         <classes>
-            <class name="Homeworks.Homework21.DragNDropTest"/>
-            <class name="Homeworks.Homework21.iFrameTest"/>
+            <class name="Homeworks.Homework21.DragNDropTestUI"/>
+            <class name="Homeworks.Homework21.iFrameTestUI"/>
             <class name="Homeworks.Homework21.SwitchTabsText"/>
         </classes>
     </test>
     <test name="Homework 22 tests">
         <classes>
-            <class name="Homeworks.Homework22.GoogleSearchTest"/>
-            <class name="Homeworks.Homework22.BookingPageObjectTest"/>
-            <class name="Homeworks.Homework22.RozetkaPageObjectTest"/>
+            <class name="Homeworks.Homework22.GoogleSearchTestUI"/>
+            <class name="Homeworks.Homework22.BookingPageObjectTestUI"/>
+            <class name="Homeworks.Homework22.RozetkaPageObjectTestUI"/>
         </classes>
     </test>
 </suite>

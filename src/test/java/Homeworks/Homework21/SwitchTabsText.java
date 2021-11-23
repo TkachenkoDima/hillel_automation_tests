@@ -1,13 +1,13 @@
 package Homeworks.Homework21;
 
-import Homeworks.BaseTest;
+import Homeworks.UIBaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-public class SwitchTabsText extends BaseTest {
+public class SwitchTabsText extends UIBaseTest {
     private final String url = "https://demoqa.com/browser-windows";
     private final String tabUrl = "https://demoqa.com/sample";
     private final String newButton = "button#tabButton";
