@@ -5,17 +5,16 @@ import com.codeborne.selenide.*;
 import org.opentest4j.AssertionFailedError;
 
 import static com.codeborne.selenide.CollectionCondition.size;
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-
 public class CitrusCartModal extends CitrusMainPage {
 
-    private final ElementsCollection item = $$("div[class='ctrs-basket-product'");
+    private final ElementsCollection item = $$("div[class='ctrs-basket-product']");
     private final SelenideElement items = $("div.el-dialog__body");
     private final SelenideElement total = $("span[class*='ctrs-basket-footer__new-price']");
+    private final SelenideElement cartWindow = $("div[class='catalog__main-content-block']");
 
     public CitrusCartModal verifyItemsCount(int itemsCount) {
         item.shouldHave(size(itemsCount));

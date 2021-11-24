@@ -20,8 +20,6 @@ public class AddTwoProductsToBasketFromComparison_Test4 {
     CitrusCartModal cartModal;
     CitrusProductsPage productsPage;
     CitrusHeaderFragment headerFragment;
-    CitrusProductSinglePage productSinglePage;
-    CitrusAddedProductModal addedProductModal;
 
     @BeforeTest
     public void setUp() {
@@ -29,27 +27,23 @@ public class AddTwoProductsToBasketFromComparison_Test4 {
     }
 
     @Test
-    public void addItemToCart() {
+    public void test() {
         mainPage = new CitrusMainPage();
         cartModal = new CitrusCartModal();
         productsPage = new CitrusProductsPage();
         headerFragment = new CitrusHeaderFragment();
-        productSinglePage = new CitrusProductSinglePage();
-        addedProductModal = new CitrusAddedProductModal();
 
         mainPage.open().closeAdPopup();
         headerFragment.performSearch(searchItem);
-        sleep(2000);
         String firstProductTitle = productsPage.getProductTitle(0);
         String secondProductTitle = productsPage.getProductTitle(1);
         String firstProductPrice = productsPage.getProductPriceByNum(0);
         String secondProductPrice = productsPage.getProductPriceByNum(1);
-        productsPage.adProductToComparison(0);
+        productsPage.addProductToComparison(0);
         headerFragment.comparisonCounterHaveItems("1");
-        productsPage.adProductToComparison(1);
+        productsPage.addProductToComparison(1);
         headerFragment.comparisonCounterHaveItems("2");
         headerFragment.clickComparison();
-        sleep(2000);
         productsPage.addProductToCartByNum(0);
         productsPage.addProductToCartByNum(3);
         sleep(2000);
@@ -60,7 +54,5 @@ public class AddTwoProductsToBasketFromComparison_Test4 {
                 .verifyProductTitle(firstProductTitle)
                 .verifyProductTitle(secondProductTitle)
                 .verifyTotal(firstProductPrice, secondProductPrice);
-
-
     }
 }
