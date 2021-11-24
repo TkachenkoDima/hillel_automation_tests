@@ -1,8 +1,10 @@
 package Homeworks.Homework25.Pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -10,6 +12,7 @@ public class CitrusMainPage {
 
     private final SelenideElement adPopupCloseButton = $("[class*=closeAdvertising]");
     private final SelenideElement brandIcon = $(" ");
+    private final SelenideElement page = $("div.main-container");
 
     public CitrusMainPage open() {
         Selenide.open("/");
@@ -35,7 +38,17 @@ public class CitrusMainPage {
     }
 
     public CitrusMainPage chooseByProducer(String brand) {
-        $(byText(brand)).click();
+        $(byText(brand)).shouldBe(visible).click();
+        return this;
+    }
+
+    public CitrusMainPage chooseByCategory(String category) {
+        $(byText("Смартфоны")).click();
+        return this;
+    }
+
+    public CitrusMainPage pageIsLoaded() {
+        page.shouldBe(visible);
         return this;
     }
 }

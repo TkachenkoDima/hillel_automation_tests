@@ -16,7 +16,7 @@ import Homeworks.Homework25.Pages.CitrusMainPage;
 
 public class AddToBasketUsingSearch_Test2 {
     String searchItem = "Apple iPhone 12";
-    String expectedProduct = "Apple iPhone 12 128GB Purple";
+    String expectedProduct = "Apple iPhone 12 Pro Max 256GB Pacific Blue";
 
     CitrusMainPage mainPage;
     CitrusCartModal cartModal;
@@ -31,7 +31,7 @@ public class AddToBasketUsingSearch_Test2 {
     }
 
     @Test
-    public void addItemToCart() {
+    public void test() {
         mainPage = new CitrusMainPage();
         cartModal = new CitrusCartModal();
         productsPage = new CitrusProductsPage();
@@ -41,14 +41,12 @@ public class AddToBasketUsingSearch_Test2 {
 
         mainPage.open().closeAdPopup();
         headerFragment.performSearch(searchItem);
-        sleep(1000);
         productsPage.isProductPresentAtSearchResults(expectedProduct);
         String productPrice = productsPage.getProductPrice(expectedProduct);
         productsPage.clickBuyButton(expectedProduct);
         addedProductModal.closeAddedProductModal();
-        sleep(2000);
+        sleep(3000);
         headerFragment.clickCart();
-        sleep(1000);
         cartModal.verifyItemsCount(1)
                 .verifyProductTitle(expectedProduct)
                 .verifyProductPrice(productPrice)

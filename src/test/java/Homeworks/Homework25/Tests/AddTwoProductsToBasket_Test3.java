@@ -2,7 +2,6 @@ package Homeworks.Homework25.Tests;
 
 import Homeworks.Homework25.Fragments.CitrusAddedProductModal;
 import Homeworks.Homework25.Fragments.CitrusCartModal;
-import Homeworks.Homework25.Pages.CitrusProductSinglePage;
 import Homeworks.Homework25.Pages.CitrusProductsPage;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeTest;
@@ -21,8 +20,6 @@ public class AddTwoProductsToBasket_Test3 {
     CitrusCartModal cartModal;
     CitrusProductsPage productsPage;
     CitrusHeaderFragment headerFragment;
-    CitrusProductSinglePage productSinglePage;
-    CitrusAddedProductModal addedProductModal;
 
     @BeforeTest
     public void setUp() {
@@ -30,17 +27,14 @@ public class AddTwoProductsToBasket_Test3 {
     }
 
     @Test
-    public void addItemToCart() {
+    public void test() {
         mainPage = new CitrusMainPage();
         cartModal = new CitrusCartModal();
         productsPage = new CitrusProductsPage();
         headerFragment = new CitrusHeaderFragment();
-        productSinglePage = new CitrusProductSinglePage();
-        addedProductModal = new CitrusAddedProductModal();
 
         mainPage.open().closeAdPopup();
         headerFragment.performSearch(searchItem);
-        sleep(2000);
         String firstProductTitle = productsPage.getProductTitle(0);
         String secondProductTitle = productsPage.getProductTitle(1);
         String firstProductPrice = productsPage.getProductPriceByNum(0);
