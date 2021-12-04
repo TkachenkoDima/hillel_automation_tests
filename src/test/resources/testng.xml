@@ -42,4 +42,36 @@
             <class name="Homeworks.Homework22.RozetkaPageObjectTestUI"/>
         </classes>
     </test>
+
+    <test name="Homework 23 tests">
+        <classes>
+            <class name="Homeworks.Homework23.SportCheckAddToCartTestUI"/>
+        </classes>
+    </test>
+
+    <test name="Homework 24 tests">
+        <classes>
+            <class name="Homeworks.Homework24.TripMyDreamTest"/>
+        </classes>
+    </test>
+
+    <test name="Homework 25 tests">
+        <classes>
+            <class name="Homeworks.Homework25.Tests.AddToBasketUsingSearch_Test2"/>
+            <class name="Homeworks.Homework25.Tests.AddTwoProductsToBasket_Test3"/>
+            <class name="Homeworks.Homework25.Tests.AddTwoProductsToBasketFromComparison_Test4"/>
+            <class name="Homeworks.Homework25.Tests.UsePriceFilter_Test5"/>
+            <class name="Homeworks.Homework25.Tests.UseMemorySizeFilter_Test6"/>
+            <class name="Homeworks.Homework25.Tests.CompareTwoPlusOneProducts_Test7"/>
+        </classes>
+    </test>
+
+    <test name="Homework 26 tests">
+        <classes>
+            <class name="Homeworks.Homework26.Tests.JQueryHideColumnTest"/>
+            <class name="Homeworks.Homework26.Tests.JQuerySearchTest"/>
+            <class name="Homeworks.Homework26.Tests.JQuerySortTest"/>
+            <class name="Homeworks.Homework26.Tests.StreamApiRozetkaTest"/>
+        </classes>
+    </test>
 </suite>
